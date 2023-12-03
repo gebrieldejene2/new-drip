@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.root-navbar a.active {
+  background: #525050;
+}
+
+.login-navbar a.active {
+  background-color: #000;
+  color: #fff;
+}
