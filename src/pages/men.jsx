@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const featuredItems = [
   {
     id: 1,
@@ -47,8 +49,24 @@ export default function Men() {
           <div className="flex flex-col items-center mt-6">
             <div className="flex flex-col  md:flex-row md:max-w-6xl md:justify-between gap-20 md:gap-5 mb-5">
               {featuredItems.map((featuredItem) => (
-                <div
+                // <div
+                //   key={featuredItem.id}
+                //   className="flex flex-col items-center w-96 h-64"
+                // >
+                //   <img
+                //     src={featuredItem.image}
+                //     alt=""
+                //     className="flex-1 object-cover object-center w-full h-full dark:bg-gray-500"
+                //   />
+                //   <Link to={`/men/${featuredItem.name}`}>
+                //     <button className="bg-white w-full py-2 uppercase text-xs">
+                //       {featuredItem.name}
+                //     </button>
+                //   </Link>
+                // </div>
+                <Link
                   key={featuredItem.id}
+                  to="../products"
                   className="flex flex-col items-center w-96 h-64"
                 >
                   <img
@@ -59,7 +77,7 @@ export default function Men() {
                   <button className="bg-white w-full py-2 uppercase text-xs">
                     {featuredItem.name}
                   </button>
-                </div>
+                </Link>
               ))}
             </div>
             <button className="bg-white px-16 py-3 uppercase text-sm">
