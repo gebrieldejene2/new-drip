@@ -13,9 +13,12 @@ import ErrorPage from "./pages/error-page";
 
 import Home from "./pages/home";
 import Men from "./pages/men";
-import Women from "./pages/women";
+// import Women from "./pages/women";
 
-import ProductsList from "./pages/product-list";
+import AllCategories from "./pages/all-categories";
+import Category from "./pages/category";
+
+import Product from "./pages/product";
 
 import Login from "./pages/login";
 import SignUp from "./pages/signup";
@@ -37,11 +40,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/women",
-        element: <Women />,
+        element: <Men />,
+      },
+      {
+        path: "/categories",
+        element: <Category />,
       },
       {
         path: "/products",
-        element: <ProductsList />,
+        element: <Product />,
       },
       {
         element: <LoginSignupLayout />,
@@ -56,7 +63,6 @@ const router = createBrowserRouter([
           },
         ],
       },
-
       {
         path: "/contact",
         element: <Contact />,

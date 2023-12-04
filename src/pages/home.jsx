@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
     <section className="dark:bg-gray-800 dark:text-gray-100">
@@ -7,12 +9,18 @@ export default function Home() {
         </h1>
         <p className="px-4 py-1 bg-white text-lg">Get drippy</p>
         <div className="flex flex-wrap justify-evenly w-full mt-10">
-          <button className="bg-white hover:scale-105 px-5 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700">
+          <Link
+            to={"/women"}
+            className="bg-white hover:scale-105 px-5 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700"
+          >
             SHOP WOMEN
-          </button>
-          <button className="bg-white hover:scale-105 px-8 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700">
+          </Link>
+          <Link
+            to={"/men"}
+            className="bg-white hover:scale-105 px-8 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700"
+          >
             SHOP MEN
-          </button>
+          </Link>
         </div>
       </div>
       <div className="w-full bg-gray-500">

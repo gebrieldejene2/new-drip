@@ -27,14 +27,14 @@ export default function Root() {
       <header className=" bg-darkGray text-white">
         <nav className="root-navbar flex items-center justify-center md:max-w-7xl md:h-16 md:px-10 lg:px-16 mx-auto">
           <a href="/">
-            <h1 className="text-4xl mr-4">Dripylux</h1>
+            <h1 className="text-4xl mr-4 font-bold">Dripylux</h1>
           </a>
           <NavLink
             to={"/women"}
             onClick={() => {
               setOpenCat("women");
             }}
-            className="h-full flex items-center justify-center px-8 hover:bg-white hover:text-gray-700"
+            className="h-full flex items-center justify-center px-8 hover:bg-white hover:text-gray-700 font-bold text-sm"
           >
             WOMEN
           </NavLink>
@@ -43,7 +43,7 @@ export default function Root() {
             onClick={() => {
               setOpenCat("men");
             }}
-            className="h-full flex items-center justify-center px-10 hover:bg-white hover:text-gray-700"
+            className="h-full flex items-center justify-center px-10 hover:bg-white hover:text-gray-700 font-bold text-smfont-bold text-sm"
           >
             MEN
           </NavLink>
@@ -52,7 +52,7 @@ export default function Root() {
               type="text"
               name="search"
               placeholder="Search for products..."
-              className="w-full rounded-lg border bg-white px-4 py-2 text-sm text-black placeholder:text-neutral-500 dark:border-neutral-800 dark:bg-transparent dark:text-white dark:placeholder:text-neutral-400"
+              className="w-full placeholder:text-sm rounded-lg border bg-white px-4 py-2 text-sm text-black placeholder:text-neutral-500 dark:border-neutral-800 dark:bg-transparent dark:text-white dark:placeholder:text-neutral-400"
             />
           </div>
           <div className="flex gap-8">
@@ -86,7 +86,7 @@ export default function Root() {
             <p className="justify-center text-center p-1">
               NEW HERE? Get 15% off almost on everything!*
               <br />
-              with code: HIFRIEND
+              with code: <strong>HIFRIEND</strong>
             </p>
             <button className="border-2 border-white px-4 py-2 hover:bg-white hover:text-black">
               MEN
