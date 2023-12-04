@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <section className="dark:bg-gray-800 dark:text-gray-100">
-      <div className="container md:my-8 bg-gray-200 min-h-screen mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32">
-        <h1 className="bg-white px-4 py-2 text-4xl font-bold leadi sm:text-5xl">
+    <section className="container md:mt-8 bg-gray-200 min-h-screen mx-auto flex flex-col items-center">
+      <div className="flex flex-col items-center justify-center w-full flex-1 py-28">
+        <h1 className="bg-white px-4 py-2 text-4xl font-bold sm:text-5xl">
           DRIPYLUX
         </h1>
         <p className="px-4 py-1 bg-white text-lg">Get drippy</p>
-        <div className="flex flex-wrap justify-evenly w-full mt-10">
+        <div className="font-bold text-lg flex flex-col md:flex-row flex-wrap justify-evenly w-full mt-12">
           <Link
             to={"/women"}
             className="bg-white hover:scale-105 px-5 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700"
@@ -23,7 +23,18 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="w-full bg-gray-500">
+      <div className="hidden md:flex justify-evenly items-center text-xs w-full bg-darkGray text-white p-2">
+        <div className="flex flex-col items-start">
+          <strong>XYZ PREMiER</strong>
+          <p>Unlimited free Next Day Delivery for</p>
+          <p>a whole year for $9.95. Ts&Cs apply.</p>
+        </div>
+        <div className="uppercase flex flex-col items-start">
+          <strong>students get 10% off</strong>
+          <p>get your code</p>
+        </div>
+      </div>
+      {/* <div className="w-full bg-gray-500">
         <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
           <h1 className="text-5xl antialiased font-semibold leadi text-center dark:text-gray-100">
             Get Our Updates
@@ -45,7 +56,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
     // <div>
     //   <div className="flex relative overflow-clip justify-center items-center mt-8 mx-5">
