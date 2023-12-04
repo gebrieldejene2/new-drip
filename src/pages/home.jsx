@@ -1,14 +1,16 @@
 export default function Home() {
   return (
     <section className="dark:bg-gray-800 dark:text-gray-100">
-      <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
-        <h1 className="text-4xl font-bold leadi sm:text-5xl">DRIPYLUX</h1>
-        <p className="px-8 mt-8 mb-12 text-lg">Get drippy</p>
-        <div className="flex flex-wrap justify-center">
-          <button className="px-8 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700">
+      <div className="container md:my-8 bg-gray-200 min-h-screen mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32">
+        <h1 className="bg-white px-4 py-2 text-4xl font-bold leadi sm:text-5xl">
+          DRIPYLUX
+        </h1>
+        <p className="px-4 py-1 bg-white text-lg">Get drippy</p>
+        <div className="flex flex-wrap justify-evenly w-full mt-10">
+          <button className="bg-white hover:scale-105 px-5 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700">
             SHOP WOMEN
           </button>
-          <button className="px-8 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700">
+          <button className="bg-white hover:scale-105 px-8 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700">
             SHOP MEN
           </button>
         </div>

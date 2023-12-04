@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+}
+
 .root-navbar a.active {
   background: #525050;
+}
+
+.root-navbar a.active:hover {
+  color: #fff;
 }
 
 .login-navbar a.active {

@@ -27,7 +27,7 @@ export default function Root() {
       <header className=" bg-darkGray text-white">
         <nav className="root-navbar flex items-center justify-center md:max-w-7xl md:h-16 md:px-10 lg:px-16 mx-auto">
           <a href="/">
-            <span className="text-4xl mr-4">Dripylux</span>
+            <h1 className="text-4xl mr-4">Dripylux</h1>
           </a>
           <NavLink
             to={"/women"}

@@ -10,13 +10,17 @@ import LoginSignupLayout from "./layouts/login-signup";
 
 //pages
 import ErrorPage from "./pages/error-page";
+
 import Home from "./pages/home";
-import Login from "./pages/login";
-import SignUp from "./pages/signup";
-import Contact from "./pages/contact";
 import Men from "./pages/men";
 import Women from "./pages/women";
+
 import ProductsList from "./pages/product-list";
+
+import Login from "./pages/login";
+import SignUp from "./pages/signup";
+
+import Contact from "./pages/contact";
 
 const router = createBrowserRouter([
   {
@@ -26,19 +30,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        element: <LoginSignupLayout />,
-        children: [
-          {
-            path: "/login",
-            element: <Login />,
-          },
-          {
-            path: "/signup",
-            element: <SignUp />,
-          },
-        ],
       },
       {
         path: "/men",
@@ -53,6 +44,20 @@ const router = createBrowserRouter([
         element: <ProductsList />,
       },
       {
+        element: <LoginSignupLayout />,
+        children: [
+          {
+            path: "/login",
+            element: <Login />,
+          },
+          {
+            path: "/signup",
+            element: <SignUp />,
+          },
+        ],
+      },
+
+      {
         path: "/contact",
         element: <Contact />,
       },
@@ -63,5 +68,5 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
