@@ -4,20 +4,20 @@ export default function Home() {
   return (
     <section className="container md:mt-8 bg-gray-200 min-h-screen mx-auto flex flex-col items-center">
       <div className="flex flex-col items-center justify-center w-full flex-1 py-28">
-        <h1 className="bg-white px-4 py-2 text-4xl font-bold sm:text-5xl">
+        <h1 className="bg-white px-6 text-center py-4 text-4xl font-bold sm:text-5xl">
           DRIPYLUX
         </h1>
-        <p className="px-4 py-1 bg-white text-lg">Get drippy</p>
-        <div className="font-bold text-lg flex flex-col md:flex-row flex-wrap justify-evenly w-full mt-12">
+        <p className="px-4 py-1 bg-white font-heading text-lg">Get drippy</p>
+        <div className="font-bold flex flex-col md:flex-row flex-wrap justify-evenly w-full mt-12">
           <Link
             to={"/women"}
-            className="bg-white hover:scale-105 px-5 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700"
+            className="bg-white hover:scale-105 px-5 py-3 m-2 border rounded dark:text-gray-50 dark:border-gray-700"
           >
             SHOP WOMEN
           </Link>
           <Link
             to={"/men"}
-            className="bg-white hover:scale-105 px-8 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700"
+            className="bg-white hover:scale-105 px-8 py-3 m-2 border rounded dark:text-gray-50 dark:border-gray-700"
           >
             SHOP MEN
           </Link>

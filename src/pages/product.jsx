@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
+import { HeartIcon } from "@heroicons/react/24/outline";
 
 const product = {
   name: "Basic Tee 6-Pack",
-  price: "125",
+  price: "19.95",
   image:
     "https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
   description:
@@ -36,20 +37,20 @@ export default function Product() {
 
   return (
     <div className="container mx-auto p-4 md:p-8">
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 pt-4">
-        <div className="col-span-3 flex flex-col items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+        <div className="col-span-2 flex flex-col items-center">
           <img
             className="max-h-screen"
             src={product.image}
             alt="product image"
           />
         </div>
-        <div className="col-span-2">
+        <div className="">
           <h1 className="text-2xl font-bold mb-4 text-gray-900 md:text-3xl">
             {product.name}
           </h1>
           <p className="mb-4 text-gray-900 md:mb-6">{product.description}</p>
-          <p className="text-3xl tracking-tight text-gray-900 mb-4 font-bold md:text-4xl">
+          <p className="text-3xl tracking-tight text-gray-900 mb-4 md:text-4xl">
             ${product.price}
           </p>
           <div className="mb-4">
@@ -124,7 +125,7 @@ export default function Product() {
                 </RadioGroup>
               </div>
             </div>
-            <div className="mt-10">
+            <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-medium text-gray-900 uppercase tracking-wider">
                   Size:
@@ -199,12 +200,17 @@ export default function Product() {
                 </div>
               </RadioGroup>
             </div>
-            <button
-              type="submit"
-              className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-black px-8 py-3 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-            >
-              Add to cart
-            </button>
+            <div className="mt-10 flex items-center gap-2">
+              <button
+                type="submit"
+                className=" flex-1 uppercase flex items-center justify-center border border-transparent bg-green-600 hover:bg-green-700 px-8 py-3 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+              >
+                add to bag
+              </button>
+              <button className="p-3 bg-red-500 hover:bg-red-600 rounded-full">
+                <HeartIcon className="h-7 w-7 text-white" />
+              </button>
+            </div>
           </form>
         </div>
       </div>

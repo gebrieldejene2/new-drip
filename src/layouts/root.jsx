@@ -24,6 +24,15 @@ export default function Root() {
   };
   return (
     <div className="flex flex-col">
+      <div className="hidden md:flex items-center text-sm w-full px-12 text-gray-700">
+        <Link className="ml-auto mr-20">Help & FAQs</Link>
+        <button className="px-3 py-1 ml-2 border-x border-gray-300">
+          <img
+            src="https://hatscripts.github.io/circle-flags/flags/ng.svg"
+            width="20"
+          ></img>
+        </button>
+      </div>
       <header className=" bg-darkGray text-white">
         <nav className="root-navbar flex items-center justify-center md:max-w-7xl md:h-16 md:px-10 lg:px-16 mx-auto">
           <a href="/">
@@ -80,7 +89,7 @@ export default function Root() {
         </div>
         <div className="hidden md:block bg-black text-white w-full">
           <div className="flex justify-between items-center max-w-7xl md:px-10 lg:px-16 mx-auto">
-            <button className="border-2 border-white px-4 py-2 hover:bg-white hover:text-black">
+            <button className="border-2 border-white px-4 py-1 hover:bg-white hover:text-black">
               WOMEN
             </button>
             <p className="justify-center text-center p-1">
@@ -88,7 +97,7 @@ export default function Root() {
               <br />
               with code: <strong>HIFRIEND</strong>
             </p>
-            <button className="border-2 border-white px-4 py-2 hover:bg-white hover:text-black">
+            <button className="border-2 border-white px-4 py-1 hover:bg-white hover:text-black">
               MEN
             </button>
           </div>
