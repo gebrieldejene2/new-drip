@@ -1,3 +1,5 @@
+import ProductsList from "./product-list";
+
 const category = {
   name: "Shoes",
   slug: "shoes",
@@ -233,19 +235,21 @@ export default function Category() {
         <h2 className="text-2xl font-bold text-center w-full mb-2">
           Women's sale: {category.name}
         </h2>
-        <p className="text-center w-full text-sm">{category.description}</p>
+        <p className="text-center w-full text-sm px-4">
+          {category.description}
+        </p>
       </div>
-      <div className="flex items-center justify-center gap-2 w-full p-2 border-b text-sm">
+      <div className="flex flex-wrap items-center md:justify-center gap-2 w-full p-2 border-b text-sm">
         {category.topProducts.map((product) => (
           <button
             key={product.id}
-            className="bg-gray-200 px-4 py-1 rounded-full uppercase font-bold text-xs hover:scale-105"
+            className="bg-gray-200 px-2 py-1 md:px-4 rounded-full uppercase font-bold text-xs hover:scale-105"
           >
             {product.name}
           </button>
         ))}
       </div>
-      <form className="grid grid-cols-6 gap-4 items-center w-full bg-gray-200 py-2 px-20">
+      <form className="grid grid-cols-2 md:grid-cols-6 gap-4 items-center w-full bg-gray-200 py-2 md:px-20">
         {category.filterOptions.map((filterOption) => (
           <select
             key={filterOption.id}
@@ -260,7 +264,9 @@ export default function Category() {
           </select>
         ))}
       </form>
-      <div className="w-full container"></div>
+      <div className="w-full container">
+        <ProductsList />
+      </div>
     </div>
   );
 }

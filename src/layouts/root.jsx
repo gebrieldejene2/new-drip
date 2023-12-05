@@ -3,7 +3,7 @@ import { Outlet, NavLink, Link } from "react-router-dom";
 import {
   UserIcon,
   HeartIcon,
-  ShoppingCartIcon,
+  ShoppingBagIcon,
 } from "@heroicons/react/24/outline";
 
 //components
@@ -72,7 +72,7 @@ export default function Root() {
               <HeartIcon className="h-6 w-6" />
             </button>
             <button onClick={toggleCart}>
-              <ShoppingCartIcon className="h-6 w-6" />
+              <ShoppingBagIcon className="h-6 w-6" />
             </button>
           </div>
         </nav>
