@@ -36,18 +36,18 @@ const featuredItems = [
 export default function Men() {
   return (
     <div>
-      <section className="flex flex-col items-center w-full min-h-screen mx-auto bg-amber-200">
+      <section className="flex flex-col items-center w-full min-h-screen mx-auto p-5 bg-amber-200">
         <div className="flex flex-col items-center">
-          <div className="flex flex-col items-center text-3xl mt-10">
+          <div className="flex flex-col items-center text-3xl my-10">
             <h2 className="bg-white px-8 rounded-full mb-2">SALE</h2>
             <h2 className="mb-2">UP TO 70% OFF</h2>
             <h3 className="text-2xl">Get there firsttt!!</h3>
-            <small className="text-sm mt-5 font-normal">
+            <small className="text-sm mt-4 font-normal">
               Limited time only. Selected styles marked down as shown
             </small>
           </div>
-          <div className="flex flex-col items-center mt-6">
-            <div className="flex flex-col  md:flex-row md:max-w-6xl md:justify-between gap-20 md:gap-5 mb-5">
+          <div className="flex flex-col items-center w-full font-semibold">
+            <div className="flex flex-col  md:flex-row md:max-w-6xl md:justify-between gap-10 md:gap-5 mb-12 md:mb-4 w-full">
               {featuredItems.map((featuredItem) => (
                 // <div
                 //   key={featuredItem.id}
@@ -66,8 +66,8 @@ export default function Men() {
                 // </div>
                 <Link
                   key={featuredItem.id}
-                  to="../products"
-                  className="flex flex-col items-center w-96 h-64"
+                  to="../categories"
+                  className="flex flex-col items-center md:w-96 w-full h-64"
                 >
                   <img
                     src={featuredItem.image}

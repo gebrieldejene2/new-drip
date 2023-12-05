@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <section className="container md:mt-8 bg-gray-200 min-h-screen mx-auto flex flex-col items-center">
       <div className="flex flex-col items-center justify-center w-full flex-1 py-28">
-        <h1 className="bg-white px-6 text-center py-4 text-4xl font-bold sm:text-5xl">
+        <h1 className="bg-white px-6 text-center py-2 text-4xl font-bold sm:text-5xl">
           DRIPYLUX
         </h1>
         <p className="px-4 py-1 bg-white font-heading text-lg">Get drippy</p>
