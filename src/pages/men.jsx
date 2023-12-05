@@ -38,16 +38,18 @@ export default function Men() {
     <div>
       <section className="flex flex-col items-center w-full min-h-screen mx-auto p-5 bg-amber-200">
         <div className="flex flex-col items-center">
-          <div className="flex flex-col items-center text-3xl my-10">
-            <h2 className="bg-white px-8 rounded-full mb-2">SALE</h2>
-            <h2 className="mb-2">UP TO 70% OFF</h2>
+          <div className="flex flex-col items-center text-3xl my-5 font-semibold">
+            <h2 className="bg-white px-8 py-2 rounded-full mb-2 uppercase text-center tracking-wide">
+              sale
+            </h2>
+            <h2 className="mb-2 uppercase">up to 70% off</h2>
             <h3 className="text-2xl">Get there firsttt!!</h3>
-            <small className="text-sm mt-4 font-normal">
+            <small className="text-sm mt-5 mb-2 font-normal">
               Limited time only. Selected styles marked down as shown
             </small>
           </div>
           <div className="flex flex-col items-center w-full font-semibold">
-            <div className="flex flex-col  md:flex-row md:max-w-6xl md:justify-between gap-10 md:gap-5 mb-12 md:mb-4 w-full">
+            <div className="flex flex-col  md:flex-row md:max-w-6xl md:justify-between gap-10 md:gap-4 mb-12 md:mb-10 w-full">
               {featuredItems.map((featuredItem) => (
                 // <div
                 //   key={featuredItem.id}
@@ -67,22 +69,25 @@ export default function Men() {
                 <Link
                   key={featuredItem.id}
                   to="../categories"
-                  className="flex flex-col items-center md:w-96 w-full h-64"
+                  className="flex flex-col items-center md:w-96 w-full h-64 group hover:scale-110"
                 >
                   <img
                     src={featuredItem.image}
                     alt=""
                     className="flex-1 object-cover object-center w-full h-full dark:bg-gray-500"
                   />
-                  <button className="bg-white w-full py-2 uppercase text-xs">
+                  <button className="bg-white w-full py-2 uppercase text-xs font-bold group-hover:bg-black group-hover:text-white">
                     {featuredItem.name}
                   </button>
                 </Link>
               ))}
             </div>
-            <button className="bg-white px-16 py-3 uppercase text-sm">
+            <Link
+              to="../categories"
+              className="bg-white px-16 py-3 uppercase font-semibold tracking-widest hover:bg-gray-100"
+            >
               view all
-            </button>
+            </Link>
           </div>
         </div>
       </section>

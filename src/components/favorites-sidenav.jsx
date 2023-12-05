@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 const Favorites = ({ openFav, toggleFav }) => {
   const products = [
@@ -93,7 +94,8 @@ const Favorites = ({ openFav, toggleFav }) => {
                             onClick={toggleFav}
                           >
                             <span className="absolute -inset-0.5" />
-                            <span className="sr-only">Close panel</span>X
+                            <span className="sr-only">Close panel</span>
+                            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                           </button>
                         </div>
                       </div>
@@ -132,7 +134,7 @@ const Favorites = ({ openFav, toggleFav }) => {
                                     <div className="flex">
                                       <button
                                         type="button"
-                                        className="font-medium text-indigo-600 hover:text-indigo-500"
+                                        className="font-medium text-red-700 hover:text-red-500"
                                       >
                                         Remove
                                       </button>
@@ -145,11 +147,10 @@ const Favorites = ({ openFav, toggleFav }) => {
                         </div>
                       </div>
                     </div>
-
                     <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                       <button
                         onClick={toggleFav}
-                        className="flex items-center justify-center w-full rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                        className="flex w-full items-center justify-center bg-black px-6 py-3 text-base font-medium text-white shadow-sm"
                       >
                         Continue Shopping
                       </button>

@@ -15,7 +15,6 @@ import Home from "./pages/home";
 import Men from "./pages/men";
 // import Women from "./pages/women";
 
-import AllCategories from "./pages/all-categories";
 import Category from "./pages/category";
 
 import Product from "./pages/product";

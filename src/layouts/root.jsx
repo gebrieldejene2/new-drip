@@ -76,7 +76,7 @@ export default function Root() {
             </button>
           </div>
         </nav>
-        <div className="bg-lightGray items-center">
+        <div className="bg-lightGray flex justify-center items-center">
           {openCat === "men" ? (
             <div>
               <button className="dropdown p-2">more men</button>

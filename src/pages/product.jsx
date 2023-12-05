@@ -8,7 +8,7 @@ const product = {
   image:
     "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   colors: [
     { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
     { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
@@ -21,8 +21,8 @@ const product = {
     { name: "M", inStock: true },
     { name: "L", inStock: true },
     { name: "XL", inStock: true },
-    { name: "2XL", inStock: true },
-    { name: "3XL", inStock: false },
+    { name: "2XL", inStock: false },
+    { name: "3XL", inStock: true },
   ],
 };
 const reviews = { href: "#", average: 4, totalCount: 117 };
@@ -50,7 +50,7 @@ export default function Product() {
             {product.name}
           </h1>
           <p className="mb-4 text-gray-900 md:mb-6">{product.description}</p>
-          <p className="text-3xl tracking-tight text-gray-900 mb-4 md:text-4xl">
+          <p className="text-3xl tracking-tight text-gray-900 mb-2 md:text-4xl">
             ${product.price}
           </p>
           <div className="mb-4">
@@ -65,7 +65,7 @@ export default function Product() {
                     fill="currentColor"
                     className={classNames(
                       reviews.average > rating
-                        ? "text-gray-900"
+                        ? "text-yellow-300"
                         : "text-gray-200",
                       "h-5 w-5 flex-shrink-0",
                     )}
@@ -82,15 +82,15 @@ export default function Product() {
             </div>
           </div>
           <form>
-            <div>
+            <div className="mb-4">
               <div>
-                <h3 className="text-sm font-medium text-gray-900 mb-2 uppercase tracking-wider">
+                <h3 className="text-sm font-medium text-gray-900 uppercase tracking-wider">
                   Color:
                 </h3>
                 <RadioGroup
                   value={selectedColor}
                   onChange={setSelectedColor}
-                  className="mt-4"
+                  className="mt-1"
                 >
                   <RadioGroup.Label className="sr-only">
                     Choose a color
@@ -135,7 +135,7 @@ export default function Product() {
               <RadioGroup
                 value={selectedSize}
                 onChange={setSelectedSize}
-                className="mt-4"
+                className="mt-2"
               >
                 <RadioGroup.Label className="sr-only">
                   Choose a size
@@ -152,7 +152,7 @@ export default function Product() {
                             ? "cursor-pointer bg-white text-gray-900 shadow-sm"
                             : "cursor-not-allowed bg-gray-50 text-gray-200",
                           active ? "ring-2 ring-indigo-500" : "",
-                          "group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6",
+                          "group relative flex items-center justify-center rounded-md border py-2 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-4",
                         )
                       }
                     >
@@ -203,11 +203,11 @@ export default function Product() {
             <div className="mt-10 flex items-center gap-2">
               <button
                 type="submit"
-                className=" flex-1 uppercase flex items-center justify-center border border-transparent bg-green-600 hover:bg-green-700 px-8 py-3 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+                className=" flex-1 uppercase rounded-md flex items-center justify-center border border-transparent bg-green-600 hover:bg-green-700 px-8 py-3 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
               >
                 add to bag
               </button>
-              <button className="p-3 bg-red-500 hover:bg-red-600 rounded-full">
+              <button className="p-3 hover:bg-red-500 bg-red-600 rounded-md">
                 <HeartIcon className="h-7 w-7 text-white" />
               </button>
             </div>
