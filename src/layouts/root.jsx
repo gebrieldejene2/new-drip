@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Outlet, NavLink, Link } from "react-router-dom";
+
+import { Popover } from "@headlessui/react";
 import {
   UserIcon,
   HeartIcon,
@@ -96,14 +98,19 @@ export default function Root() {
             </button>
           </div>
         </nav>
-        <div className="hidden md:flex w-full bg-lightGray items-center justify-center">
+        <div className="hidden md:block bg-lightGray text-gray-200">
           {openCat === "men" ? (
-            <div>
-              <button className="dropdown p-2">more men</button>
+            <div className="relative flex w-full items-center justify-center gap-4">
+              <div className="group">
+                <button className="p-2 font-bold">Hello</button>
+                <div className="absolute hidden group-hover:block z-10 bg-white max-w-5xl left-0 right-0 mx-auto">
+                  hello
+                </div>
+              </div>
             </div>
           ) : openCat === "women" ? (
-            <div>
-              <button className="dropdown p-2">more women</button>
+            <div className="relative flex w-full items-center justify-center gap-4">
+              hello
             </div>
           ) : null}
         </div>

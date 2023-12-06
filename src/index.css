@@ -20,12 +20,13 @@ body {
   border: 1px solid red;
 }
 
-.root-navbar a.active {
+header nav a.active {
   background: #525050;
 }
 
-.root-navbar a.active:hover {
+header nav a.active:hover {
   color: #fff;
+  background: #525050;
 }
 
 .login-navbar a.active {
