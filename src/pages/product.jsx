@@ -46,7 +46,7 @@ export default function Product() {
           />
         </div>
         <div className="">
-          <h1 className="text-2xl font-bold mb-4 text-gray-900 md:text-3xl">
+          <h1 className="text-2xl font-bold mb-2 text-gray-900 md:text-3xl">
             {product.name}
           </h1>
           <p className="mb-4 text-gray-900 md:mb-6">{product.description}</p>
