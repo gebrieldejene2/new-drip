@@ -1,12 +1,12 @@
 export default function Login() {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full p-4">
       <form
         action="#"
         method="POST"
-        className="flex-flex-col w-full items-start text-stone-400 mb-4"
+        className="flex-flex-col w-full items-start text-stone-400 mb-4 px-8 md:px-12"
       >
-        <div className="block w-full mb-8">
+        <div className="block w-full mb-6">
           <label htmlFor="email" className="block mb-2">
             email address:
           </label>
@@ -20,9 +20,17 @@ export default function Login() {
           />
         </div>
         <div className="block w-full mb-4">
-          <label htmlFor="email" className="block mb-2">
-            password:
-          </label>
+          <div className="flex w-full justify-between items-center mb-2">
+            <label htmlFor="email" className="block ">
+              password:
+            </label>
+            <a
+              href="#"
+              className="font-medium text-sm normal-case text-blue-700 tracking-normal hover:underline"
+            >
+              Forgot password?
+            </a>
+          </div>
           <input
             id="password"
             name="password"
@@ -38,19 +46,16 @@ export default function Login() {
           sign in
         </button>
       </form>
-      <a
-        href="#"
-        className="font-medium text-xs normal-case text-blue-700 tracking-normal hover:underline"
-      >
-        Forgot password?
-      </a>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 pb-12 lg:px-8">
-        {/* <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Login to your account
-        </h2>
-      </div> */}
-
+      <p className="text-xs text-gray-700 my-6">or sign in with ...</p>
+      <button className="w-full border border-gray-300 p-5 uppercase">
+        google
+      </button>
+      {/* <div className="flex min-h-full flex-1 flex-col justify-center px-6 pb-12 lg:px-8">
+        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+            Login to your account
+          </h2>
+        </div>
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" action="#" method="POST">
             <div>
@@ -111,7 +116,7 @@ export default function Login() {
             </div>
           </form>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
