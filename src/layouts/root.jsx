@@ -32,7 +32,7 @@ export default function Root() {
     setOpenMobileMenu(!openMobileMenu);
   };
   return (
-    <div className="flex flex-col w-full min-h-screen bg-gray-100 text-gray-700 font-sans overflow-x-hidden">
+    <div className="flex flex-col w-full bg-gray-100 text-gray-700 font-sans overflow-x-hidden tracking-wide">
       <header>
         <div className="hidden md:flex items-center text-sm w-full px-12 text-gray-700">
           <Link className="ml-auto mr-20">Help & FAQs</Link>

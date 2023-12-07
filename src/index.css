@@ -30,6 +30,5 @@ header nav a.active:hover {
 }
 
 .login-navbar a.active {
-  background-color: #000;
-  color: #fff;
+  border-bottom: 2px solid #0770cf;
 }

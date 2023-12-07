@@ -8,6 +8,7 @@ export default {
         darkGray: "#2D2D2D",
         lightGray: "#525050",
         cloud: "#DDDDDD",
+        grayBackground: "#CCCBCB",
       },
     },
   },
