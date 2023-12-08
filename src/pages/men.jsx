@@ -26,11 +26,6 @@ const featuredItems = [
     name: "pics under 20$",
     image: "https://source.unsplash.com/random/300x300/?5",
   },
-  {
-    id: 6,
-    name: "sporty stuff",
-    image: "https://source.unsplash.com/random/300x300/?6",
-  },
 ];
 
 export default function Men() {
@@ -42,17 +37,17 @@ export default function Men() {
         </h2>
         <h2 className="mb-2 uppercase">up to 70% off</h2>
         <h3 className="text-2xl">Get there firsttt!!</h3>
-        <small className="text-sm mt-5 mb-2 font-normal text-center">
+        <small className="text-sm mt-4 mb-2 font-normal text-center">
           Limited time only. Selected styles marked down as shown
         </small>
       </div>
       <div className="flex flex-col items-center w-full font-semibold">
-        <div className="flex flex-col  md:flex-row md:max-w-6xl md:justify-between gap-10 md:gap-4 mb-12 md:mb-10 w-full">
+        <div className="flex flex-col md:flex-row md:max-w-7xl md:justify-between gap-10 md:gap-8 mb-12 md:mb-6 w-full px-10">
           {featuredItems.map((featuredItem) => (
-            <a
+            <Link
               key={featuredItem.id}
-              href="/categories"
-              className="flex flex-col items-center md:w-96 w-full h-64 group hover:scale-110"
+              to="/categories"
+              className="flex flex-col items-center md:w-96 w-full h-72 group md:hover:scale-110 shadow-lg"
             >
               <img
                 src={featuredItem.image}
@@ -62,7 +57,7 @@ export default function Men() {
               <button className="bg-white w-full py-2 uppercase text-xs font-bold group-hover:bg-black group-hover:text-white">
                 {featuredItem.name}
               </button>
-            </a>
+            </Link>
           ))}
         </div>
         <Link

@@ -230,7 +230,7 @@ const category = {
 export default function Category() {
   return (
     <div className="flex flex-col items-center w-full">
-      <div className="w-full border-b py-2">breadcrumbs</div>
+      <div className="hidden md:flex w-full border-b py-2">breadcrumbs</div>
       <div className="flex flex-col items-center w-full py-4 border-b">
         <h2 className="text-2xl font-bold text-center w-full mb-2">
           Women's sale: {category.name}
@@ -249,7 +249,7 @@ export default function Category() {
           </button>
         ))}
       </div>
-      <form className="grid grid-cols-2 md:grid-cols-6 gap-4 items-center w-full bg-gray-200 py-2 md:px-20">
+      <form className="hidden md:grid grid-cols-2 md:grid-cols-6 gap-4 items-center w-full bg-gray-200 py-2 md:px-20 mb-8">
         {category.filterOptions.map((filterOption) => (
           <select
             key={filterOption.id}

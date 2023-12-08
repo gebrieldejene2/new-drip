@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Outlet, NavLink, Link } from "react-router-dom";
 
-import { Popover } from "@headlessui/react";
 import {
   UserIcon,
   HeartIcon,
@@ -32,7 +31,7 @@ export default function Root() {
     setOpenMobileMenu(!openMobileMenu);
   };
   return (
-    <div className="flex flex-col w-full bg-gray-100 text-gray-700 font-sans overflow-x-hidden tracking-wide">
+    <div className="flex flex-col w-full bg-gray-100 text-gray-700 font-sans tracking-wide">
       <header>
         <div className="hidden md:flex items-center text-sm w-full px-12 text-gray-700">
           <Link className="ml-auto mr-20">Help & FAQs</Link>

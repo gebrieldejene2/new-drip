@@ -45,11 +45,24 @@ export default function Login() {
         >
           sign in
         </button>
+        <p className="text-xs w-full text-center text-gray-700 my-8">
+          or sign in with ...
+        </p>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.google.com"
+          className="flex items-center justify-center w-full border-2 border-gray-300 p-4 uppercase hover:border-blue-700"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+            alt=""
+            className="mr-4"
+          />
+          google
+        </a>
       </form>
-      <p className="text-xs text-gray-700 my-6">or sign in with ...</p>
-      <button className="w-full border border-gray-300 p-5 uppercase">
-        google
-      </button>
+
       {/* <div className="flex min-h-full flex-1 flex-col justify-center px-6 pb-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">

@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const Cart = ({ openCart, toggleCart }) => {
   const products = [
@@ -161,13 +162,13 @@ const Cart = ({ openCart, toggleCart }) => {
                         Shipping and taxes calculated at checkout.
                       </p>
                       <div className="mt-6">
-                        <a
-                          href="#"
+                        <Link
+                          to="checkout"
                           onClick={toggleCart}
                           className="flex w-full items-center justify-center bg-black px-6 py-3 text-base font-medium text-white shadow-sm"
                         >
                           Checkout
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

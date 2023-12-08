@@ -16,8 +16,8 @@ import Men from "./pages/men";
 // import Women from "./pages/women";
 
 import Category from "./pages/category";
-
 import Product from "./pages/product";
+import Checkout from "./pages/checkout";
 
 import Login from "./pages/login";
 import SignUp from "./pages/signup";
@@ -50,6 +50,10 @@ const router = createBrowserRouter([
         element: <Product />,
       },
       {
+        path: "/checkout",
+        element: <Checkout />,
+      },
+      {
         element: <LoginSignupLayout />,
         children: [
           {
@@ -73,5 +77,5 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

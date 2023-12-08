@@ -1,23 +1,57 @@
 export default function SignUp() {
   return (
     <div className="flex flex-col items-center w-full p-2">
-      <p className="text-center mb-4">sign up with ...</p>
+      {/* <p className="text-center mb-4">sign up with ...</p>
       <div className="flex flex-col w-full items-center mb-8">
-        <button className="w-full border border-gray-300 p-4 uppercase mb-2">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.google.com"
+          className="flex items-center justify-center w-full border-2 border-gray-300 p-4 uppercase hover:border-blue-700"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+            alt=""
+            className="mr-4"
+          />
           google
-        </button>
+        </a>
         <p className="text-center normal-case font-medium tracking-normal">
           Signing up with social is super quick. No extra passwords to remember
           - no brain fail. Don't worry, we'd never share any of your data or
           post anything on your behalf #NotEvil
         </p>
       </div>
-      <p className="text-center mb-8">or sign up with email</p>
+      <p className="text-center mb-8">or sign up with email</p> */}
       <form
         action="#"
         method="POST"
         className="flex-flex-col w-full items-start text-stone-400 mb-4 px-8 md:px-12"
       >
+        <div className="text-gray-700">
+          <p className="text-center mb-4">sign up with ...</p>
+          <div className="flex flex-col w-full items-center mb-8">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.google.com"
+              className="flex items-center justify-center w-full border-2 border-gray-300 p-4 uppercase hover:border-blue-700"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                alt=""
+                className="mr-4"
+              />
+              google
+            </a>
+            <p className="text-center normal-case font-medium tracking-normal mt-2">
+              Signing up with social is super quick. No extra passwords to
+              remember - no brain fail. Don't worry, we'd never share any of
+              your data or post anything on your behalf #NotEvil
+            </p>
+          </div>
+          <p className="text-center mb-8">or sign up with email</p>
+        </div>
         <div className="block w-full mb-6">
           <label htmlFor="email" className="block mb-2">
             email address:
@@ -115,6 +149,12 @@ export default function SignUp() {
             You need to be 16 or more to use Dripylux
           </label>
         </div>
+        <button
+          type="submit"
+          className="w-full uppercase bg-darkGray text-white p-4 tracking-widest font-semibold"
+        >
+          join dripylux
+        </button>
         {/* <div className="block w-full mb-4">
           <label htmlFor="birth" className="block mb-2">
             mostly interested in:

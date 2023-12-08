@@ -23,13 +23,13 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="hidden md:flex justify-evenly items-center text-xs w-full bg-darkGray text-white p-2">
-        <div className="flex flex-col items-start">
+      <div className="hidden md:flex items-center text-sm w-full bg-darkGray text-white p-2">
+        <div className="flex flex-col items-start mx-auto">
           <strong>XYZ PREMiER</strong>
           <p>Unlimited free Next Day Delivery for</p>
           <p>a whole year for $9.95. Ts&Cs apply.</p>
         </div>
-        <div className="uppercase flex flex-col items-start">
+        <div className="uppercase flex flex-col items-start mx-auto">
           <strong>students get 10% off</strong>
           <p>get your code</p>
         </div>
