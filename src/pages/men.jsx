@@ -64,9 +64,9 @@ export default function Men() {
             //     </button>
             //   </Link>
             // </div>
-            <Link
+            <a
               key={featuredItem.id}
-              to="../categories"
+              href="../categories"
               className="flex flex-col items-center md:w-96 w-full h-64 group hover:scale-110"
             >
               <img
@@ -77,15 +77,15 @@ export default function Men() {
               <button className="bg-white w-full py-2 uppercase text-xs font-bold group-hover:bg-black group-hover:text-white">
                 {featuredItem.name}
               </button>
-            </Link>
+            </a>
           ))}
         </div>
-        <Link
-          to="../categories"
+        <a
+          href="../categories"
           className="bg-white px-16 py-3 uppercase font-semibold tracking-widest hover:bg-gray-100"
         >
           view all
-        </Link>
+        </a>
       </div>
     </div>
   );
