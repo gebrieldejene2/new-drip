@@ -49,24 +49,9 @@ export default function Men() {
       <div className="flex flex-col items-center w-full font-semibold">
         <div className="flex flex-col  md:flex-row md:max-w-6xl md:justify-between gap-10 md:gap-4 mb-12 md:mb-10 w-full">
           {featuredItems.map((featuredItem) => (
-            // <div
-            //   key={featuredItem.id}
-            //   className="flex flex-col items-center w-96 h-64"
-            // >
-            //   <img
-            //     src={featuredItem.image}
-            //     alt=""
-            //     className="flex-1 object-cover object-center w-full h-full dark:bg-gray-500"
-            //   />
-            //   <Link to={`/men/${featuredItem.name}`}>
-            //     <button className="bg-white w-full py-2 uppercase text-xs">
-            //       {featuredItem.name}
-            //     </button>
-            //   </Link>
-            // </div>
-            <Link
+            <a
               key={featuredItem.id}
-              to="../categories"
+              href="/categories"
               className="flex flex-col items-center md:w-96 w-full h-64 group hover:scale-110"
             >
               <img
@@ -77,7 +62,7 @@ export default function Men() {
               <button className="bg-white w-full py-2 uppercase text-xs font-bold group-hover:bg-black group-hover:text-white">
                 {featuredItem.name}
               </button>
-            </Link>
+            </a>
           ))}
         </div>
         <Link
