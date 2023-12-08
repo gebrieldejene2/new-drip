@@ -162,7 +162,7 @@ const Cart = ({ openCart, toggleCart }) => {
                       </p>
                       <div className="mt-6">
                         <a
-                          href="/checkout"
+                          href="#"
                           onClick={toggleCart}
                           className="flex w-full items-center justify-center bg-black px-6 py-3 text-base font-medium text-white shadow-sm"
                         >

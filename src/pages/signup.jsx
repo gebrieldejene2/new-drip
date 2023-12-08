@@ -3,12 +3,7 @@ export default function SignUp() {
     <div className="flex flex-col items-center w-full p-2">
       <p className="text-center mb-4">sign up with ...</p>
       <div className="flex flex-col w-full items-center mb-8">
-        <button className="w-full flex items-center justify-center border-2 border-gray-300 p-4 uppercase hover:border-blue-700 tracking-widest">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-            alt="google"
-            className="w-5 h-5 mr-2"
-          />
+        <button className="w-full border border-gray-300 p-4 uppercase mb-2">
           google
         </button>
         <p className="text-center normal-case font-medium tracking-normal">
@@ -120,13 +115,6 @@ export default function SignUp() {
             You need to be 16 or more to use Dripylux
           </label>
         </div>
-        <div className="block w-full mb-4"></div>
-        <button
-          type="submit"
-          className="w-full uppercase bg-darkGray text-white p-4 tracking-widest font-semibold"
-        >
-          join dripylux
-        </button>
         {/* <div className="block w-full mb-4">
           <label htmlFor="birth" className="block mb-2">
             mostly interested in:

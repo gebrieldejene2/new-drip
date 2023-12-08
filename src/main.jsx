@@ -16,9 +16,8 @@ import Men from "./pages/men";
 // import Women from "./pages/women";
 
 import Category from "./pages/category";
-import Product from "./pages/product";
 
-import Checkout from "./pages/checkout";
+import Product from "./pages/product";
 
 import Login from "./pages/login";
 import SignUp from "./pages/signup";
@@ -49,10 +48,6 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Product />,
-      },
-      {
-        path: "/checkout",
-        element: <Checkout />,
       },
       {
         element: <LoginSignupLayout />,
