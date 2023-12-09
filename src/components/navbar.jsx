@@ -46,7 +46,7 @@ const Navbar = () => {
             </NavLink>
             <input
               type="text"
-              className="flex-1 text-grayFont rounded-lg px-4 py-1 ml-4 mr-6"
+              className="flex-1 rounded-lg px-4 py-1 ml-4 mr-6"
               placeholder="Search for items and brands"
             />
             <div className="flex gap-8">

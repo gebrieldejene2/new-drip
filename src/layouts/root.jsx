@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 //components
+import TopBar from "../components/top-bar";
 import MobileMenu from "../components/mobile-menu";
 import Cart from "../components/cart-sidenav";
 import Favorites from "../components/favorites-sidenav";
@@ -31,17 +32,9 @@ export default function Root() {
     setOpenMobileMenu(!openMobileMenu);
   };
   return (
-    <div className="flex flex-col w-full bg-gray-100 text-gray-700 font-sans tracking-wide">
-      <header>
-        <div className="hidden md:flex items-center text-sm w-full px-12 text-gray-700">
-          <Link className="ml-auto mr-20">Help & FAQs</Link>
-          <button className="px-3 py-1 ml-2 border-x border-gray-300">
-            <img
-              src="https://hatscripts.github.io/circle-flags/flags/ng.svg"
-              width="20"
-            ></img>
-          </button>
-        </div>
+    <div className="w-full min-h-screen flex flex-col items-center">
+      <header className="w-full flex flex-col items-center">
+        <TopBar />
         <nav className="flex items-center w-full h-auto md:h-16 bg-darkGray text-white px-4 md:px-12 lg:px-20 py-3 md:py-0">
           <div className="flex items-center md:hidden">
             <button onClick={toggleMobileMenu} className="mr-4">
@@ -113,7 +106,7 @@ export default function Root() {
             </div>
           ) : null}
         </div>
-        <div className="hidden md:flex w-full bg-black text-white items-center justify-between md:px-12 lg:px-20">
+        <div className="hidden md:flex w-full bg-black text-white tracking-widest items-center justify-between md:px-12 lg:px-20">
           <button className="border-2 border-white px-4 py-1 hover:bg-white hover:text-black">
             WOMEN
           </button>

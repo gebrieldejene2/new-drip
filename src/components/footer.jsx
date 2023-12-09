@@ -1,3 +1,30 @@
+const footerLinks = {
+  help: [
+    { name: "Help", href: "#" },
+    { name: "Tracking order", href: "#" },
+    { name: "Delivery & returns", href: "#" },
+    { name: "DRIPYLUX Premier", href: "#" },
+    { name: "Sitemap", href: "#" },
+  ],
+  about: [
+    { name: "About us", href: "#" },
+    { name: "Careers at DRIPYLUX", href: "#" },
+    { name: "Corporate responsibility", href: "#" },
+  ],
+  more: [
+    { name: "About", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Jobs", href: "#" },
+    { name: "Press", href: "#" },
+    { name: "Partners", href: "#" },
+  ],
+  socials: [
+    { name: "Facebook", href: "#" },
+    { name: "Instagram", href: "#" },
+    { name: "Snapchat", href: "#" },
+  ],
+};
+
 const Footer = () => {
   return (
     <footer className="px-4 divide-y dark:bg-gray-800 dark:text-gray-100 font-normal border-t mt-8">
