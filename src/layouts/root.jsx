@@ -120,7 +120,7 @@ export default function Root() {
           </button>
         </div>
       </header>
-      <main className="flex flex-col items-center w-full min-h-screen">
+      <main className="flex flex-col items-center w-full">
         <MobileMenu
           openMobileMenu={openMobileMenu}
           toggleMobileMenu={toggleMobileMenu}

@@ -8,10 +8,10 @@ export default function Home() {
           DRIPYLUX
         </h1>
         <p className="px-4 py-1 bg-white font-heading text-lg">Get drippy</p>
-        <div className="font-bold w-full flex flex-col md:flex-row flex-wrap justify-evenly items-center mt-12">
+        <div className="w-full flex flex-col md:flex-row flex-wrap justify-evenly items-center font-black mt-12">
           <Link
             to={"/women"}
-            className="bg-white hover:scale-105 px-5 py-3 m-2 border rounded dark:text-gray-50 dark:border-gray-700"
+            className="bg-white hover:scale-105 px-8 py-3 m-2 border rounded dark:text-gray-50 dark:border-gray-700"
           >
             SHOP WOMEN
           </Link>

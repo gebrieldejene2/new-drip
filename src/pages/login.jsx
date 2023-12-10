@@ -52,7 +52,7 @@ export default function Login() {
           target="_blank"
           rel="noreferrer"
           href="https://www.google.com"
-          className="flex items-center justify-center w-full border-2 border-gray-300 p-4 uppercase hover:border-blue-700"
+          className="flex items-center justify-center w-full border-2 text-black border-gray-300 p-4 uppercase hover:border-blue-700"
         >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"

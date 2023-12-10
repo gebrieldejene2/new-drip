@@ -1,49 +1,9 @@
-const items = [
-  {
-    id: 1,
-    name: "Throwback Hip Bag",
-    color: "Salmon",
-    price: "$90.00",
-    quantity: 1,
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
-    imageAlt:
-      "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.",
-  },
-  {
-    id: 2,
-    name: "Medium Stuff Satchel",
-    color: "Blue",
-    price: "$32.00",
-    quantity: 3,
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
-    imageAlt:
-      "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
-  },
-  {
-    id: 3,
-    name: "Medium Stuff Satchel",
-    color: "Blue",
-    price: "$32.00",
-    quantity: 5,
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
-    imageAlt:
-      "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
-  },
-  {
-    id: 4,
-    name: "Medium Stuff Satchel",
-    color: "Blue",
-    price: "$32.00",
-    quantity: 2,
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
-    imageAlt:
-      "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
-  },
-];
+import { Disclosure, Tab } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export default function Checkout() {
   return (
@@ -76,10 +36,58 @@ export default function Checkout() {
             </div>
           </div>
           <div className="w-full bg-white text-black p-5 mb-5">
-            <label htmlFor="promocode" className="block font-extrabold mb-4">
-              promo/student code or vouchers:
-            </label>
-            <div className="flex items-center"></div>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex justify-between w-full py-2 mb-2 text-xs uppercase">
+                    <label htmlFor="promocode" className="block font-extrabold">
+                      promo/student code or vouchers:
+                    </label>
+                    <ChevronDownIcon
+                      className={
+                        open ? "rotate-180 transform h-5 w-5" : "h-6 w-6"
+                      }
+                    />
+                  </Disclosure.Button>
+                  <Disclosure.Panel>
+                    <Tab.Group>
+                      <Tab.List className="flex mb-2">
+                        <Tab
+                          className={({ selected }) =>
+                            classNames(
+                              "w-full flex items-center justify-center p-2 md:p-4 -mr-px border-2 border-transparent text-xs font-black tracking-wider uppercase",
+                              "focus:outline-none focus:ring-0",
+                              selected
+                                ? "border-gray-600 border-b-0"
+                                : "border-b-gray-600",
+                            )
+                          }
+                        >
+                          <span>promo/student code</span>
+                        </Tab>
+                        <Tab
+                          className={({ selected }) =>
+                            classNames(
+                              "w-full flex items-center justify-center p-2 md:p-4 -ml-px border-2 border-transparent text-xs font-black tracking-wider uppercase",
+                              "focus:outline-none focus:ring-0",
+                              selected
+                                ? "border-gray-600 border-b-0"
+                                : "border-b-gray-600",
+                            )
+                          }
+                        >
+                          <span>vouchers</span>
+                        </Tab>
+                      </Tab.List>
+                      <Tab.Panels>
+                        <Tab.Panel>Content 1</Tab.Panel>
+                        <Tab.Panel>Content 2</Tab.Panel>
+                      </Tab.Panels>
+                    </Tab.Group>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
           </div>
           <div className="w-full bg-white text-black p-5 mb-5">
             <label htmlFor="email" className="block font-extrabold mb-2">
@@ -90,12 +98,101 @@ export default function Checkout() {
             </p>
           </div>
           <div className="w-full bg-white text-black p-5 mb-5">
-            <label
-              htmlFor="delivery-address"
-              className="block font-extrabold mb-4"
-            >
-              delivery address
-            </label>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex justify-between w-full py-2 mb-2 text-xs uppercase">
+                    <label htmlFor="promocode" className="block font-extrabold">
+                      delivery address
+                    </label>
+                    <ChevronDownIcon
+                      className={
+                        open ? "rotate-180 transform h-5 w-5" : "h-6 w-6"
+                      }
+                    />
+                  </Disclosure.Button>
+                  <Disclosure.Panel>
+                    <Tab.Group>
+                      <Tab.List className="flex mb-2">
+                        <Tab
+                          className={({ selected }) =>
+                            classNames(
+                              "w-full flex items-center justify-center p-2 md:p-4 -mr-px border-2 border-transparent text-xs font-black tracking-wider uppercase",
+                              "focus:outline-none focus:ring-0",
+                              selected
+                                ? "border-gray-600 border-b-0"
+                                : "border-b-gray-600",
+                            )
+                          }
+                        >
+                          <span>promo/student code</span>
+                        </Tab>
+                        <Tab
+                          className={({ selected }) =>
+                            classNames(
+                              "w-full flex items-center justify-center p-2 md:p-4 -ml-px border-2 border-transparent text-xs font-black tracking-wider uppercase",
+                              "focus:outline-none focus:ring-0",
+                              selected
+                                ? "border-gray-600 border-b-0"
+                                : "border-b-gray-600",
+                            )
+                          }
+                        >
+                          <span>vouchers</span>
+                        </Tab>
+                      </Tab.List>
+                      <Tab.Panels>
+                        <Tab.Panel>Content 1</Tab.Panel>
+                        <Tab.Panel>Content 2</Tab.Panel>
+                      </Tab.Panels>
+                    </Tab.Group>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+            {/* <Disclosure>
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex justify-between w-full py-2 text-xs uppercase">
+                    <label htmlFor="promocode" className="block font-extrabold">
+                      delivery address
+                    </label>
+                    <ChevronDownIcon
+                      className={
+                        open ? "rotate-180 transform h-5 w-5" : "h-5 w-5"
+                      }
+                    />
+                  </Disclosure.Button>
+                  <Disclosure.Panel>
+                    <div className="flex w-full items-start justify-between">
+                      <div className="flex flex-col items-start gap-2">
+                        <p className="text-sm text-stone-500 normal-case">
+                          test address
+                        </p>
+                        <p className="text-sm text-stone-500 normal-case">
+                          test city
+                        </p>
+                        <p className="text-sm text-stone-500 normal-case">
+                          test state
+                        </p>
+                        <p className="text-sm text-stone-500 normal-case">
+                          test country
+                        </p>
+                        <p className="text-sm text-stone-500 normal-case">
+                          test postal code
+                        </p>
+                      </div>
+                      <a
+                        href="#"
+                        className="uppercase text-sm tracking-wide font-bold bg-stone-200 px-5 py-3"
+                      >
+                        change
+                      </a>
+                    </div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure> */}
           </div>
           <div className="w-full bg-white text-black p-5 mb-5">
             <label
@@ -106,9 +203,26 @@ export default function Checkout() {
             </label>
           </div>
           <div className="w-full bg-white text-black p-5 mb-5">
-            <label htmlFor="payment" className="block font-extrabold mb-4">
-              payment
-            </label>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex justify-between w-full py-2 text-xs uppercase">
+                    <label
+                      htmlFor="promocode"
+                      className="block font-extrabold mb-4"
+                    >
+                      payment
+                    </label>
+                    <ChevronDownIcon
+                      className={
+                        open ? "rotate-180 transform h-5 w-5" : "h-5 w-5"
+                      }
+                    />
+                  </Disclosure.Button>
+                  <Disclosure.Panel>No</Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
           </div>
         </form>
         <div className="col-span-2 bg-white w-full md:h-1/2 p-5"></div>
