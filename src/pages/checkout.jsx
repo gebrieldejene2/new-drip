@@ -55,11 +55,11 @@ export default function Checkout() {
                         <Tab
                           className={({ selected }) =>
                             classNames(
-                              "w-full flex items-center justify-center p-2 md:p-4 -mr-px border-2 border-transparent text-xs font-black tracking-wider uppercase",
+                              "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
                               "focus:outline-none focus:ring-0",
                               selected
-                                ? "border-gray-600 border-b-0"
-                                : "border-b-gray-600",
+                                ? "border-x md:border-x-2 border-t md:border-t-2"
+                                : "border-b md:border-b-2",
                             )
                           }
                         >
@@ -68,11 +68,11 @@ export default function Checkout() {
                         <Tab
                           className={({ selected }) =>
                             classNames(
-                              "w-full flex items-center justify-center p-2 md:p-4 -ml-px border-2 border-transparent text-xs font-black tracking-wider uppercase",
+                              "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
                               "focus:outline-none focus:ring-0",
                               selected
-                                ? "border-gray-600 border-b-0"
-                                : "border-b-gray-600",
+                                ? "border-x md:border-x-2 border-t md:border-t-2"
+                                : "border-b md:border-b-2",
                             )
                           }
                         >
@@ -117,28 +117,28 @@ export default function Checkout() {
                         <Tab
                           className={({ selected }) =>
                             classNames(
-                              "w-full flex items-center justify-center p-2 md:p-4 -mr-px border-2 border-transparent text-xs font-black tracking-wider uppercase",
+                              "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
                               "focus:outline-none focus:ring-0",
                               selected
-                                ? "border-gray-600 border-b-0"
-                                : "border-b-gray-600",
+                                ? "border-x md:border-x-2 border-t md:border-t-2"
+                                : "border-b md:border-b-2",
                             )
                           }
                         >
-                          <span>promo/student code</span>
+                          <span>postal address</span>
                         </Tab>
                         <Tab
                           className={({ selected }) =>
                             classNames(
-                              "w-full flex items-center justify-center p-2 md:p-4 -ml-px border-2 border-transparent text-xs font-black tracking-wider uppercase",
+                              "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
                               "focus:outline-none focus:ring-0",
                               selected
-                                ? "border-gray-600 border-b-0"
-                                : "border-b-gray-600",
+                                ? "border-x md:border-x-2 border-t md:border-t-2"
+                                : "border-b md:border-b-2",
                             )
                           }
                         >
-                          <span>vouchers</span>
+                          <span>click & collect</span>
                         </Tab>
                       </Tab.List>
                       <Tab.Panels>
