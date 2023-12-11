@@ -2,6 +2,15 @@ import { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 import { HeartIcon } from "@heroicons/react/24/outline";
 
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  alert("product added to cart");
+
+  // Your custom form handling logic here
+  // e.g., validate input, send data to server, update state
+};
+
 const product = {
   name: "Basic Tee 6-Pack",
   price: "19.95",
@@ -81,7 +90,7 @@ export default function Product() {
               <p className="sr-only">{reviews.average} out of 5 stars</p>
             </div>
           </div>
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             <div className="mb-4">
               <div>
                 <h3 className="text-sm font-medium text-gray-900 uppercase tracking-wider">
