@@ -32,21 +32,23 @@ export default function Root() {
     setOpenMobileMenu(!openMobileMenu);
   };
   return (
-    <div className="w-full min-h-screen flex flex-col items-center">
+    <div className="flex flex-col">
       <header className="w-full flex flex-col items-center">
         <TopBar />
-        <nav className="flex items-center w-full h-auto md:h-16 bg-darkGray text-white px-4 md:px-12 lg:px-20 py-3 md:py-0">
+        <nav className="flex items-center w-full h-auto md:h-16 bg-darkGray text-white px-4 md:px-14 lg:px-24 py-4 md:py-0">
           <div className="flex items-center md:hidden">
             <button onClick={toggleMobileMenu} className="mr-4">
-              <Bars3Icon className="h-6 w-6" />
+              <Bars3Icon className="h-8 w-8" />
             </button>
             <a href="/">
-              <h1 className="font-bold">Dripylux</h1>
+              <h1 className="text-2xl tracking-wide font-ransel">Dripylux</h1>
             </a>
           </div>
           <div className="hidden md:flex flex-1 items-center h-full">
             <a href="/">
-              <h1 className="text-4xl mr-4 font-bold">Dripylux</h1>
+              <h1 className="text-4xl mr-4 font-bold font-ransel tracking-wide">
+                Dripylux
+              </h1>
             </a>
             <NavLink
               to={"/women"}
@@ -66,7 +68,7 @@ export default function Root() {
             >
               MEN
             </NavLink>
-            <div className="flex-1 ml-2 mr-6">
+            <div className="flex-1 ml-4 mr-6">
               <input
                 type="text"
                 name="search"
@@ -75,7 +77,7 @@ export default function Root() {
               />
             </div>
           </div>
-          <div className="flex items-center gap-4 md:gap-8 ml-auto">
+          <div className="flex items-center gap-3 md:gap-6 ml-auto">
             <button className="md:hidden">
               <MagnifyingGlassIcon className="h-6 w-6" />
             </button>
@@ -90,12 +92,12 @@ export default function Root() {
             </button>
           </div>
         </nav>
-        <div className="hidden md:block bg-lightGray text-gray-200">
+        {/* <div className="hidden md:flex items-center justify-center bg-lightGray text-gray-200">
           {openCat === "men" ? (
             <div className="relative flex w-full items-center justify-center gap-4">
               <div className="group">
                 <button className="p-2 font-bold">Hello</button>
-                <div className="absolute hidden group-hover:block z-10 bg-white max-w-5xl left-0 right-0 mx-auto">
+                <div className="absolute hidden group-hover:block z-10 max-w-5xl left-0 right-0 mx-auto">
                   hello
                 </div>
               </div>
@@ -105,7 +107,7 @@ export default function Root() {
               hello
             </div>
           ) : null}
-        </div>
+        </div> */}
         <div className="hidden md:flex w-full bg-black text-white tracking-widest items-center justify-between md:px-12 lg:px-20">
           <button className="border-2 border-white px-4 py-1 hover:bg-white hover:text-black">
             WOMEN

@@ -23,6 +23,7 @@ import Login from "./pages/login";
 import SignUp from "./pages/signup";
 
 import Contact from "./pages/contact";
+import Support from "./pages/support";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         element: <Checkout />,
       },
       {
+        path: "/support",
+        element: <Support />,
+      },
+      {
         element: <LoginSignupLayout />,
         children: [
           {
@@ -77,5 +82,5 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

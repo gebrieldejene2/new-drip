@@ -57,8 +57,8 @@ export default function Checkout() {
                           "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
                           "focus:outline-none focus:ring-0",
                           selected
-                            ? "border-x md:border-x-2 border-t md:border-t-2"
-                            : "border-b md:border-b-2",
+                            ? "border-x border-t"
+                            : "border-b md:border-b-2"
                         )
                       }
                     >
@@ -70,8 +70,8 @@ export default function Checkout() {
                           "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
                           "focus:outline-none focus:ring-0",
                           selected
-                            ? "border-x md:border-x-2 border-t md:border-t-2"
-                            : "border-b md:border-b-2",
+                            ? "border-x border-t"
+                            : "border-b md:border-b-2"
                         )
                       }
                     >
@@ -181,8 +181,8 @@ export default function Checkout() {
                               "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
                               "focus:outline-none focus:ring-0",
                               selected
-                                ? "border-x md:border-x-2 border-t md:border-t-2"
-                                : "border-b md:border-b-2",
+                                ? "border-x border-t"
+                                : "border-b md:border-b-2"
                             )
                           }
                         >
@@ -194,8 +194,8 @@ export default function Checkout() {
                               "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
                               "focus:outline-none focus:ring-0",
                               selected
-                                ? "border-x md:border-x-2 border-t md:border-t-2"
-                                : "border-b md:border-b-2",
+                                ? "border-x border-t"
+                                : "border-b md:border-b-2"
                             )
                           }
                         >
@@ -209,7 +209,7 @@ export default function Checkout() {
                               add address
                             </span>
                             <form>
-                              <div className="flex gap-4">
+                              <div className="md:flex gap-4">
                                 <div className="block w-full mb-4">
                                   <label
                                     htmlFor="firstName"
@@ -422,10 +422,76 @@ export default function Checkout() {
             </Disclosure>
           </div>
         </form>
-        <div className="col-span-2 bg-white w-full md:h-1/2 p-5 uppercase">
-          <div className="flex justify-between">
-            <span className="block font-extrabold text-xs mb-4">4 items</span>
-            <button className="block text-xs mb-4 uppercase">editt</button>
+        <div className="col-span-2 w-full">
+          <div className="bg-white p-4">
+            <div className="flex px-2 mb-2">
+              <h2 className="text-xs uppercase font-extrabold mr-auto">
+                4 items
+              </h2>
+              <button className="text-sm text-gray-500 hover:text-gray-700 font-semibold">
+                Edit
+              </button>
+            </div>
+            <div className="flex flex-col gap-4 md:gap-2 border-y py-4 mb-4">
+              <div className="grid grid-cols-3 h-36 w-full gap-2 pr-4">
+                <div className="col-span-1 h-full">
+                  <img src="" alt="" className="h-full w-full" />
+                </div>
+                <div className="col-span-2 h-full w-full flex flex-col items-start justify-between">
+                  <h2 className="text-stone-500 text-xl font-bold">$12.50</h2>
+                  <p className="text-sm tracking-wide normal-case text-black">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Nobis dicta autem inventore.
+                  </p>
+                  <div className="flex w-full items-center justify-between mb-2">
+                    <button className="text-xs text-stone-500 uppercase font-bold">
+                      color
+                    </button>
+                    <button className="text-xs text-stone-500 uppercase font-bold">
+                      size
+                    </button>
+                    <button className="text-xs text-stone-500 uppercase font-bold">
+                      Qty: 1
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 h-36 w-full gap-2 pr-4">
+                <div className="col-span-1 h-full">
+                  <img src="" alt="" className="h-full w-full" />
+                </div>
+                <div className="col-span-2 h-full w-full flex flex-col items-start justify-between">
+                  <h2 className="text-stone-500 text-xl font-bold">$12.50</h2>
+                  <p className="text-sm tracking-wide normal-case text-black">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Nobis dicta autem inventore.
+                  </p>
+                  <div className="flex w-full items-center justify-between mb-2">
+                    <button className="text-xs text-stone-500 uppercase font-bold">
+                      color
+                    </button>
+                    <button className="text-xs text-stone-500 uppercase font-bold">
+                      size
+                    </button>
+                    <button className="text-xs text-stone-500 uppercase font-bold">
+                      Qty: 1
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="text-stone-500">
+              <div className="flex items-center justify-between text-sm mb-2">
+                <span className="normal-case">sub-total:</span>
+                <span>$25.00</span>
+              </div>
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-black font-extrabold tracking-wider">
+                  total to pay:
+                </span>
+                <span>$25.00</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
