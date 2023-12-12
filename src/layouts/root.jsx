@@ -32,7 +32,7 @@ export default function Root() {
     setOpenMobileMenu(!openMobileMenu);
   };
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col antialiased">
       <header className="w-full flex flex-col items-center">
         <TopBar />
         <nav className="flex items-center w-full h-auto md:h-16 bg-darkGray text-white px-4 md:px-14 lg:px-24 py-4 md:py-0">
@@ -122,7 +122,7 @@ export default function Root() {
           </button>
         </div>
       </header>
-      <main className="flex flex-col items-center w-full">
+      <main className="flex flex-col items-center min-h-screen w-full">
         <MobileMenu
           openMobileMenu={openMobileMenu}
           toggleMobileMenu={toggleMobileMenu}

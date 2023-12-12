@@ -1,5 +1,12 @@
 import { Disclosure, Tab } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+
+import {
+  ChevronDownIcon,
+  TagIcon,
+  TicketIcon,
+  HomeIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -17,10 +24,7 @@ export default function Checkout() {
           className="col-span-3 flex flex-col w-full text-xs uppercase"
         >
           <div className="w-full bg-white text-black p-5 mb-5">
-            <label
-              htmlFor="delivery-country"
-              className="block font-extrabold mb-4"
-            >
+            <label htmlFor="delivery-country" className="block font-bold mb-4">
               delivery country:
             </label>
             <div className="flex items-center w-1/2">
@@ -41,9 +45,9 @@ export default function Checkout() {
           <div className="w-full bg-white text-black p-5 mb-5">
             <Disclosure defaultOpen={true}>
               <Disclosure.Button className="flex justify-between w-full py-2 mb-2 text-xs uppercase">
-                <label htmlFor="promocode" className="block font-extrabold">
+                <span className="font-bold">
                   promo/student code or vouchers:
-                </label>
+                </span>
                 <ChevronDownIcon
                   className={open ? "rotate-180 transform h-5 w-5" : "h-6 w-6"}
                 />
@@ -54,41 +58,43 @@ export default function Checkout() {
                     <Tab
                       className={({ selected }) =>
                         classNames(
-                          "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
+                          "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-extrabold tracking-wider uppercase",
                           "focus:outline-none focus:ring-0",
                           selected
                             ? "border-x border-t"
-                            : "border-b md:border-b-2"
+                            : "border-b md:border-b-2",
                         )
                       }
                     >
+                      <TagIcon className="h-5 w-5 mr-2" />
                       <span>promo/student code</span>
                     </Tab>
                     <Tab
                       className={({ selected }) =>
                         classNames(
-                          "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
+                          "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-extrabold tracking-wider uppercase",
                           "focus:outline-none focus:ring-0",
                           selected
                             ? "border-x border-t"
-                            : "border-b md:border-b-2"
+                            : "border-b md:border-b-2",
                         )
                       }
                     >
+                      <TicketIcon className="h-5 w-5 mr-2" />
                       <span>vouchers</span>
                     </Tab>
                   </Tab.List>
                   <Tab.Panels>
                     <Tab.Panel>
                       <div className="mb-6">
-                        <span className="block font-extrabold mb-4">
+                        <span className="block font-bold mb-4">
                           add promo/student code
                         </span>
                         <label
                           htmlFor="promocode"
                           className="block text-stone-400 text-xs tracking-widest font-bold mb-0.5"
                         >
-                          promo/student code
+                          promo/student code:
                         </label>
                         <div className="flex gap-2">
                           <input
@@ -108,8 +114,8 @@ export default function Checkout() {
                     </Tab.Panel>
                     <Tab.Panel>
                       <div className="mb-6">
-                        <span className="block font-extrabold mb-4">
-                          add voucher
+                        <span className="block font-bold mb-4">
+                          add voucher:
                         </span>
                         <label
                           htmlFor="voucher"
@@ -138,7 +144,7 @@ export default function Checkout() {
               </Disclosure.Panel>
             </Disclosure>
             <div>
-              <label className="block font-extrabold mb-2">need to know</label>
+              <label className="block font-bold mb-2">need to know</label>
               <ul className="list-disc list-outside px-5 normal-case text-sm text-stone-600 leading-6">
                 <li className="mb-1">
                   You can only use one discount/promo code per order.This
@@ -151,7 +157,7 @@ export default function Checkout() {
             </div>
           </div>
           <div className="w-full bg-white text-black p-5 mb-5">
-            <label htmlFor="email" className="block font-extrabold mb-2">
+            <label htmlFor="email" className="block font-bold mb-2">
               email address
             </label>
             <p className="text-sm text-stone-600 normal-case">
@@ -163,9 +169,7 @@ export default function Checkout() {
               {({ open }) => (
                 <>
                   <Disclosure.Button className="flex justify-between w-full py-2 mb-2 text-xs uppercase">
-                    <span className="block font-extrabold">
-                      delivery address
-                    </span>
+                    <span className="block font-bold">delivery address</span>
                     <ChevronDownIcon
                       className={
                         open ? "rotate-180 transform h-5 w-5" : "h-6 w-6"
@@ -178,34 +182,36 @@ export default function Checkout() {
                         <Tab
                           className={({ selected }) =>
                             classNames(
-                              "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
+                              "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-extrabold tracking-wider uppercase",
                               "focus:outline-none focus:ring-0",
                               selected
                                 ? "border-x border-t"
-                                : "border-b md:border-b-2"
+                                : "border-b md:border-b-2",
                             )
                           }
                         >
+                          <HomeIcon className="h-5 w-5 mr-2" />
                           <span>postal address</span>
                         </Tab>
                         <Tab
                           className={({ selected }) =>
                             classNames(
-                              "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
+                              "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-extrabold tracking-wider uppercase",
                               "focus:outline-none focus:ring-0",
                               selected
                                 ? "border-x border-t"
-                                : "border-b md:border-b-2"
+                                : "border-b md:border-b-2",
                             )
                           }
                         >
+                          <MapPinIcon className="h-5 w-5 mr-2" />
                           <span>click & collect</span>
                         </Tab>
                       </Tab.List>
                       <Tab.Panels>
                         <Tab.Panel>
                           <div>
-                            <span className="block font-extrabold mb-6">
+                            <span className="block font-bold mb-6">
                               add address
                             </span>
                             <form>
@@ -213,7 +219,7 @@ export default function Checkout() {
                                 <div className="block w-full mb-4">
                                   <label
                                     htmlFor="firstName"
-                                    className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                    className="block mb-1 uppercase text-stone-400 font-bold tracking-widest"
                                   >
                                     first name:
                                   </label>
@@ -228,7 +234,7 @@ export default function Checkout() {
                                 <div className="block w-full mb-4">
                                   <label
                                     htmlFor="lastName"
-                                    className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                    className="block mb-1 uppercase text-stone-400 font-bold tracking-widest"
                                   >
                                     last name:
                                   </label>
@@ -244,7 +250,7 @@ export default function Checkout() {
                               <div className="block w-full mb-4">
                                 <label
                                   htmlFor="phoneNumber"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="block mb-1 uppercase text-stone-400 font-bold tracking-widest"
                                 >
                                   phone number:
                                 </label>
@@ -259,7 +265,7 @@ export default function Checkout() {
                               <div className="block w-full mb-2">
                                 <label
                                   htmlFor="addressLine1"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="block mb-1 uppercase text-stone-400 font-bold tracking-widest"
                                 >
                                   address:
                                 </label>
@@ -274,7 +280,7 @@ export default function Checkout() {
                               <div className="block w-full mb-4">
                                 {/* <label
                                   htmlFor="addressLine2"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="block mb-1 uppercase text-stone-400 font-bold tracking-widest"
                                 >
                                   address 2:
                                 </label> */}
@@ -289,7 +295,7 @@ export default function Checkout() {
                               <div className="block w-full mb-4">
                                 <label
                                   htmlFor="city"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="block mb-1 uppercase text-stone-400 font-bold tracking-widest"
                                 >
                                   city:
                                 </label>
@@ -304,7 +310,7 @@ export default function Checkout() {
                               <div className="block w-full mb-4">
                                 <label
                                   htmlFor="country"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="block mb-1 uppercase text-stone-400 font-bold tracking-widest"
                                 >
                                   country:
                                 </label>
@@ -319,7 +325,7 @@ export default function Checkout() {
                               <div className="block w-full mb-4">
                                 <label
                                   htmlFor="postalCode"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="block mb-1 uppercase text-stone-400 font-bold tracking-widest"
                                 >
                                   postal code:
                                 </label>
@@ -351,7 +357,7 @@ export default function Checkout() {
               {({ open }) => (
                 <>
                   <Disclosure.Button className="flex justify-between w-full py-2 text-xs uppercase">
-                    <label htmlFor="promocode" className="block font-extrabold">
+                    <label htmlFor="promocode" className="block font-bold">
                       delivery address
                     </label>
                     <ChevronDownIcon
@@ -392,10 +398,7 @@ export default function Checkout() {
             </Disclosure> */}
           </div>
           <div className="w-full bg-white text-black p-5 mb-5">
-            <label
-              htmlFor="delivery-options"
-              className="block font-extrabold mb-4"
-            >
+            <label htmlFor="delivery-options" className="block font-bold mb-4">
               delivery options
             </label>
           </div>
@@ -404,10 +407,7 @@ export default function Checkout() {
               {({ open }) => (
                 <>
                   <Disclosure.Button className="flex justify-between w-full py-2 text-xs uppercase">
-                    <label
-                      htmlFor="promocode"
-                      className="block font-extrabold mb-4"
-                    >
+                    <label htmlFor="promocode" className="block font-bold mb-4">
                       payment
                     </label>
                     <ChevronDownIcon
@@ -425,9 +425,7 @@ export default function Checkout() {
         <div className="col-span-2 w-full">
           <div className="bg-white p-4">
             <div className="flex px-2 mb-2">
-              <h2 className="text-xs uppercase font-extrabold mr-auto">
-                4 items
-              </h2>
+              <h2 className="text-xs uppercase font-bold mr-auto">4 items</h2>
               <button className="text-sm text-gray-500 hover:text-gray-700 font-semibold">
                 Edit
               </button>
@@ -486,7 +484,7 @@ export default function Checkout() {
                 <span>$25.00</span>
               </div>
               <div className="flex items-center justify-between text-xs">
-                <span className="text-black font-extrabold tracking-wider">
+                <span className="uppercase text-black font-bold tracking-wider">
                   total to pay:
                 </span>
                 <span>$25.00</span>

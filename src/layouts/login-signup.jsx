@@ -4,7 +4,7 @@ export default function LoginSignupLayout() {
   return (
     <div className="flex flex-col items-center w-full md:max-w-lg mx-auto">
       <h1 className="hidden md:block text-4xl font-bold my-8">Dripylux</h1>
-      <div className="container bg-white font-extrabold uppercase text-xs tracking-widest md:p-4">
+      <div className="container bg-white font-bold uppercase text-xs tracking-widest md:p-4">
         <div className="flex flex-col items-center">
           <h1 className="md:hidden text-2xl font-bold my-6">Dripylux</h1>
           <nav className="login-navbar flex items-center w-full text-black mb-4">
