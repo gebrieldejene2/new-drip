@@ -1,13 +1,12 @@
 export default function Login() {
   return (
-    <div className="flex flex-col items-center w-full p-4">
+    <div className="flex w-full flex-col items-center p-4">
       <form
         action="#"
         method="POST"
-        className="flex-flex-col w-full items-start text-stone-400 mb-4 px-8 md:px-12"
-      >
-        <div className="block w-full mb-6">
-          <label htmlFor="email" className="block mb-2">
+        className="flex-flex-col mb-4 w-full items-start px-8 text-stone-400 md:px-12">
+        <div className="mb-6 block w-full">
+          <label htmlFor="email" className="mb-2 block">
             email address:
           </label>
           <input
@@ -16,18 +15,17 @@ export default function Login() {
             type="email"
             autoComplete="email"
             required
-            className="w-full text-sm font-medium text-black border-2 border-stone-400 p-4 focus:outline-none"
+            className="w-full border-2 border-stone-400 p-4 text-sm font-medium text-black focus:outline-none"
           />
         </div>
-        <div className="block w-full mb-4">
-          <div className="flex w-full justify-between items-center mb-2">
+        <div className="mb-4 block w-full">
+          <div className="mb-2 flex w-full items-center justify-between">
             <label htmlFor="email" className="block ">
               password:
             </label>
             <a
               href="#"
-              className="font-medium text-sm normal-case text-blue-700 tracking-normal hover:underline"
-            >
+              className="text-sm font-medium normal-case tracking-normal text-blue-700 hover:underline">
               Forgot password?
             </a>
           </div>
@@ -36,24 +34,20 @@ export default function Login() {
             name="password"
             type="password"
             required
-            className="w-full text-sm font-medium text-black border-2 border-stone-400 p-4 focus:outline-none"
+            className="w-full border-2 border-stone-400 p-4 text-sm font-medium text-black focus:outline-none"
           />
         </div>
         <button
           type="submit"
-          className="w-full uppercase bg-darkGray text-white p-4 tracking-widest font-semibold"
-        >
+          className="w-full bg-darkGray p-4 font-semibold uppercase tracking-widest text-white">
           sign in
         </button>
-        <p className="text-xs w-full text-center text-gray-700 my-8">
-          or sign in with ...
-        </p>
+        <p className="my-8 w-full text-center text-xs text-gray-700">or sign in with ...</p>
         <a
           target="_blank"
           rel="noreferrer"
           href="https://www.google.com"
-          className="flex items-center justify-center w-full border-2 text-black border-gray-300 p-4 uppercase hover:border-blue-700"
-        >
+          className="flex w-full items-center justify-center border-2 border-gray-300 p-4 uppercase text-black hover:border-blue-700">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
             alt=""
@@ -131,5 +125,5 @@ export default function Login() {
         </div>
       </div> */}
     </div>
-  );
+  )
 }

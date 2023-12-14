@@ -1,24 +1,18 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from 'react-router-dom'
 
 export default function LoginSignupLayout() {
   return (
-    <div className="flex flex-col items-center w-full md:max-w-lg mx-auto">
-      <h1 className="hidden md:block text-4xl font-bold my-8">Dripylux</h1>
-      <div className="container bg-white font-bold uppercase text-xs tracking-widest md:p-4">
+    <div className="mx-auto flex w-full flex-col items-center md:max-w-lg">
+      <h1 className="my-8 hidden text-4xl font-bold md:block">Dripylux</h1>
+      <div className="container bg-white text-xs font-bold uppercase tracking-widest md:p-4">
         <div className="flex flex-col items-center">
-          <h1 className="md:hidden text-2xl font-bold my-6">Dripylux</h1>
-          <nav className="login-navbar flex items-center w-full text-black mb-4">
-            <NavLink
-              to="/login"
-              className="py-5 w-full text-center border-b-2 border-gray-200"
-            >
+          <h1 className="my-6 text-2xl font-bold md:hidden">Dripylux</h1>
+          <nav className="login-navbar mb-4 flex w-full items-center text-black">
+            <NavLink to="/login" className="w-full border-b-2 border-gray-200 py-5 text-center">
               sign in
             </NavLink>
-            <div className="border-r border-gray-300 h-12 mx-1"></div>
-            <NavLink
-              to="/signup"
-              className="py-5 w-full text-center border-b-2 border-gray-200"
-            >
+            <div className="mx-1 h-12 border-r border-gray-300"></div>
+            <NavLink to="/signup" className="w-full border-b-2 border-gray-200 py-5 text-center">
               join
             </NavLink>
           </nav>
@@ -47,5 +41,5 @@ export default function LoginSignupLayout() {
         </section>
       </div> */}
     </div>
-  );
+  )
 }

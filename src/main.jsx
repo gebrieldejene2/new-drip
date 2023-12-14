@@ -1,29 +1,29 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import "./index.css";
+import './index.css'
 
 //layouts
-import Root from "./layouts/root";
-import LoginSignupLayout from "./layouts/login-signup";
+import Root from './layouts/root'
+import LoginSignupLayout from './layouts/login-signup'
 
 //pages
-import ErrorPage from "./pages/error-page";
+import ErrorPage from './pages/error-page'
 
-import Home from "./pages/home";
-import Men from "./pages/men";
+import Home from './pages/home'
+import Men from './pages/men'
 // import Women from "./pages/women";
 
-import Category from "./pages/category";
-import Product from "./pages/product";
-import Checkout from "./pages/checkout";
+import Category from './pages/category'
+import Product from './pages/product'
+import Checkout from './pages/checkout'
 
-import Login from "./pages/login";
-import SignUp from "./pages/signup";
+import Login from './pages/login'
+import SignUp from './pages/signup'
 
-import Contact from "./pages/contact";
-import Support from "./pages/support";
+import Contact from './pages/contact'
+import Support from './pages/support'
 
 const router = createBrowserRouter([
   {
@@ -31,56 +31,56 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
       {
-        path: "/men",
+        path: '/men',
         element: <Men />,
       },
       {
-        path: "/women",
+        path: '/women',
         element: <Men />,
       },
       {
-        path: "/categories",
+        path: '/categories',
         element: <Category />,
       },
       {
-        path: "/products",
+        path: '/products',
         element: <Product />,
       },
       {
-        path: "/checkout",
+        path: '/checkout',
         element: <Checkout />,
       },
       {
-        path: "/support",
+        path: '/support',
         element: <Support />,
       },
       {
         element: <LoginSignupLayout />,
         children: [
           {
-            path: "/login",
+            path: '/login',
             element: <Login />,
           },
           {
-            path: "/signup",
+            path: '/signup',
             element: <SignUp />,
           },
         ],
       },
       {
-        path: "/contact",
+        path: '/contact',
         element: <Contact />,
       },
     ],
   },
-]);
+])
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)

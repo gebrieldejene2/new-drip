@@ -1,260 +1,258 @@
-import ProductsList from "./product-list";
+import ProductsList from './product-list'
 
 const category = {
-  name: "Shoes",
-  slug: "shoes",
+  name: 'Shoes',
+  slug: 'shoes',
   description:
-    "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   topProducts: [
     {
       id: 1,
-      name: "trainers",
+      name: 'trainers',
     },
     {
       id: 2,
-      name: "flat sandals",
+      name: 'flat sandals',
     },
     {
       id: 3,
-      name: "helled sandals",
+      name: 'helled sandals',
     },
     {
       id: 4,
-      name: "ankle boots",
+      name: 'ankle boots',
     },
     {
       id: 5,
-      name: "flat shoes",
+      name: 'flat shoes',
     },
     {
       id: 6,
-      name: "heeled sandals",
+      name: 'heeled sandals',
     },
     {
       id: 7,
-      name: "flip flops",
+      name: 'flip flops',
     },
     {
       id: 8,
-      name: "ballet pumps",
+      name: 'ballet pumps',
     },
     {
       id: 9,
-      name: "wedding shoes",
+      name: 'wedding shoes',
     },
   ],
   filterOptions: [
     {
       id: 1,
-      name: "sort",
+      name: 'sort',
       options: [
         {
           id: 1,
-          name: "name A-Z",
+          name: 'name A-Z',
         },
         {
           id: 2,
-          name: "price low to high",
+          name: 'price low to high',
         },
         {
           id: 3,
-          name: "price high to low",
+          name: 'price high to low',
         },
       ],
     },
     {
       id: 2,
-      name: "discount",
+      name: 'discount',
       options: [
         {
           id: 1,
-          name: "name A-Z",
+          name: 'name A-Z',
         },
         {
           id: 2,
-          name: "price low to high",
+          name: 'price low to high',
         },
         {
           id: 3,
-          name: "price high to low",
+          name: 'price high to low',
         },
       ],
     },
     {
       id: 3,
-      name: "product type",
+      name: 'product type',
       options: [
         {
           id: 1,
-          name: "name A-Z",
+          name: 'name A-Z',
         },
         {
           id: 2,
-          name: "price low to high",
+          name: 'price low to high',
         },
         {
           id: 3,
-          name: "price high to low",
+          name: 'price high to low',
         },
       ],
     },
     {
       id: 4,
-      name: "Style",
+      name: 'Style',
       options: [
         {
           id: 1,
-          name: "name A-Z",
+          name: 'name A-Z',
         },
         {
           id: 2,
-          name: "price low to high",
+          name: 'price low to high',
         },
         {
           id: 3,
-          name: "price high to low",
+          name: 'price high to low',
         },
       ],
     },
     {
       id: 5,
-      name: "Leather/Fabric",
+      name: 'Leather/Fabric',
       options: [
         {
           id: 1,
-          name: "name A-Z",
+          name: 'name A-Z',
         },
         {
           id: 2,
-          name: "price low to high",
+          name: 'price low to high',
         },
         {
           id: 3,
-          name: "price high to low",
+          name: 'price high to low',
         },
       ],
     },
     {
       id: 6,
-      name: "Brand",
+      name: 'Brand',
       options: [
         {
           id: 1,
-          name: "name A-Z",
+          name: 'name A-Z',
         },
         {
           id: 2,
-          name: "price low to high",
+          name: 'price low to high',
         },
         {
           id: 3,
-          name: "price high to low",
+          name: 'price high to low',
         },
       ],
     },
     {
       id: 7,
-      name: "Color",
+      name: 'Color',
       options: [
         {
           id: 1,
-          name: "name A-Z",
+          name: 'name A-Z',
         },
         {
           id: 2,
-          name: "price low to high",
+          name: 'price low to high',
         },
         {
           id: 3,
-          name: "price high to low",
+          name: 'price high to low',
         },
       ],
     },
     {
       id: 8,
-      name: "Body Fit",
+      name: 'Body Fit',
       options: [
         {
           id: 1,
-          name: "name A-Z",
+          name: 'name A-Z',
         },
         {
           id: 2,
-          name: "price low to high",
+          name: 'price low to high',
         },
         {
           id: 3,
-          name: "price high to low",
+          name: 'price high to low',
         },
       ],
     },
     {
       id: 9,
-      name: "Size",
+      name: 'Size',
       options: [
         {
           id: 1,
-          name: "name A-Z",
+          name: 'name A-Z',
         },
         {
           id: 2,
-          name: "price low to high",
+          name: 'price low to high',
         },
         {
           id: 3,
-          name: "price high to low",
+          name: 'price high to low',
         },
       ],
     },
     {
       id: 10,
-      name: "Price Range",
+      name: 'Price Range',
       options: [
         {
           id: 1,
-          name: "name A-Z",
+          name: 'name A-Z',
         },
         {
           id: 2,
-          name: "price low to high",
+          name: 'price low to high',
         },
         {
           id: 3,
-          name: "price high to low",
+          name: 'price high to low',
         },
       ],
     },
   ],
-};
+}
 
 export default function Category() {
   return (
-    <div className="flex flex-col items-center w-full">
-      <div className="hidden md:flex w-full border-b py-2">breadcrumbs</div>
-      <div className="flex flex-col items-center w-full py-4 border-b">
-        <h2 className="text-2xl font-bold text-center w-full mb-2">
+    <div className="flex w-full flex-col items-center">
+      <div className="hidden w-full border-b py-2 md:flex">breadcrumbs</div>
+      <div className="flex w-full flex-col items-center border-b py-4">
+        <h2 className="mb-2 w-full text-center text-2xl font-bold">
           Women's sale: {category.name}
         </h2>
-        <p className="text-center w-full text-sm px-4">
-          {category.description}
-        </p>
+        <p className="w-full px-4 text-center text-sm">{category.description}</p>
       </div>
-      <div className="flex flex-wrap items-center md:justify-center gap-2 w-full p-2 border-b text-sm">
+      <div className="flex w-full flex-wrap items-center gap-2 border-b p-2 text-sm md:justify-center">
         {category.topProducts.map((product) => (
           <button
             key={product.id}
-            className="bg-gray-200 px-2 py-1 md:px-4 rounded-full uppercase font-bold text-xs hover:scale-105"
+            className="rounded-full bg-gray-200 px-2 py-1 text-xs font-bold uppercase hover:scale-105 md:px-4"
           >
             {product.name}
           </button>
         ))}
       </div>
-      <form className="hidden md:grid grid-cols-2 md:grid-cols-6 gap-4 items-center w-full bg-gray-200 py-2 md:px-20 mb-8">
+      <form className="mb-8 hidden w-full grid-cols-2 items-center gap-4 bg-gray-200 py-2 md:grid md:grid-cols-6 md:px-20">
         {category.filterOptions.map((filterOption) => (
           <select
             key={filterOption.id}
             id={filterOption.id}
-            className="py-2 text-sm bg-transparent border-y border-gray-300 text-gray-700"
+            className="border-y border-gray-300 bg-transparent py-2 text-sm text-gray-700"
           >
             {filterOption.options.map((option) => (
               <option key={option.id} value={option.name}>
@@ -264,9 +262,9 @@ export default function Category() {
           </select>
         ))}
       </form>
-      <div className="w-full container">
+      <div className="container w-full">
         <ProductsList />
       </div>
     </div>
-  );
+  )
 }

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Ransel";
-  src: url("./assets/fonts/ransel/Ransel-Regular.ttf");
+  font-family: 'Ransel';
+  src: url('./assets/fonts/ransel/Ransel-Regular.ttf');
 }
 
 body {

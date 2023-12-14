@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Outlet, NavLink, Link } from "react-router-dom";
+import { useState } from 'react'
+import { Outlet, NavLink, Link } from 'react-router-dom'
 
 import {
   UserIcon,
@@ -7,77 +7,75 @@ import {
   ShoppingBagIcon,
   Bars3Icon,
   MagnifyingGlassIcon,
-} from "@heroicons/react/24/outline";
+} from '@heroicons/react/24/outline'
 
 //components
-import TopBar from "../components/top-bar";
-import MobileMenu from "../components/mobile-menu";
-import Cart from "../components/cart-sidenav";
-import Favorites from "../components/favorites-sidenav";
-import Footer from "../components/footer";
+import TopBar from '../components/top-bar'
+import MobileMenu from '../components/mobile-menu'
+import Cart from '../components/cart-sidenav'
+import Favorites from '../components/favorites-sidenav'
+import Footer from '../components/footer'
 
 export default function Root() {
-  const [openCat, setOpenCat] = useState("");
-  const [openMobileMenu, setOpenMobileMenu] = useState(false);
-  const [openCart, setOpenCart] = useState(false);
-  const [openFav, setOpenFav] = useState(false);
+  const [openCat, setOpenCat] = useState('')
+  const [openMobileMenu, setOpenMobileMenu] = useState(false)
+  const [openCart, setOpenCart] = useState(false)
+  const [openFav, setOpenFav] = useState(false)
 
   const toggleCart = () => {
-    setOpenCart(!openCart);
-  };
+    setOpenCart(!openCart)
+  }
   const toggleFav = () => {
-    setOpenFav(!openFav);
-  };
+    setOpenFav(!openFav)
+  }
   const toggleMobileMenu = () => {
-    setOpenMobileMenu(!openMobileMenu);
-  };
+    setOpenMobileMenu(!openMobileMenu)
+  }
   return (
     <div className="flex flex-col antialiased">
-      <header className="w-full flex flex-col items-center">
+      <header className="flex w-full flex-col items-center">
         <TopBar />
-        <nav className="flex items-center w-full h-auto md:h-16 bg-darkGray text-white px-4 md:px-14 lg:px-24 py-4 md:py-0">
+        <nav className="flex h-auto w-full items-center bg-darkGray px-4 py-4 text-white md:h-16 md:px-14 md:py-0 lg:px-24">
           <div className="flex items-center md:hidden">
             <button onClick={toggleMobileMenu} className="mr-4">
               <Bars3Icon className="h-8 w-8" />
             </button>
             <a href="/">
-              <h1 className="text-2xl tracking-wide font-ransel">Dripylux</h1>
+              <h1 className="font-ransel text-2xl tracking-wide">Dripylux</h1>
             </a>
           </div>
-          <div className="hidden md:flex flex-1 items-center h-full">
+          <div className="hidden h-full flex-1 items-center md:flex">
             <a href="/">
-              <h1 className="text-4xl mr-4 font-bold font-ransel tracking-wide">
-                Dripylux
-              </h1>
+              <h1 className="mr-4 font-ransel text-4xl font-bold tracking-wide">Dripylux</h1>
             </a>
             <NavLink
-              to={"/women"}
+              to={'/women'}
               onClick={() => {
-                setOpenCat("women");
+                setOpenCat('women')
               }}
-              className="h-full flex items-center justify-center px-8 hover:bg-white hover:text-gray-700 font-bold text-sm"
+              className="flex h-full items-center justify-center px-8 text-sm font-bold hover:bg-white hover:text-gray-700"
             >
               WOMEN
             </NavLink>
             <NavLink
-              to={"/men"}
+              to={'/men'}
               onClick={() => {
-                setOpenCat("men");
+                setOpenCat('men')
               }}
-              className="h-full flex items-center justify-center px-10 hover:bg-white hover:text-gray-700 font-bold text-smfont-bold text-sm"
+              className="text-smfont-bold flex h-full items-center justify-center px-10 text-sm font-bold hover:bg-white hover:text-gray-700"
             >
               MEN
             </NavLink>
-            <div className="flex-1 ml-4 mr-6">
+            <div className="ml-4 mr-6 flex-1">
               <input
                 type="text"
                 name="search"
                 placeholder="Search for products..."
-                className="w-full placeholder:text-sm rounded-lg border bg-white px-4 py-2 text-sm text-black placeholder:text-neutral-500 dark:border-neutral-800 dark:bg-transparent dark:text-white dark:placeholder:text-neutral-400"
+                className="w-full rounded-lg border bg-white px-4 py-2 text-sm text-black placeholder:text-sm placeholder:text-neutral-500 dark:border-neutral-800 dark:bg-transparent dark:text-white dark:placeholder:text-neutral-400"
               />
             </div>
           </div>
-          <div className="flex items-center gap-3 md:gap-6 ml-auto">
+          <div className="ml-auto flex items-center gap-3 md:gap-6">
             <button className="md:hidden">
               <MagnifyingGlassIcon className="h-6 w-6" />
             </button>
@@ -108,11 +106,11 @@ export default function Root() {
             </div>
           ) : null}
         </div> */}
-        <div className="hidden md:flex w-full bg-black text-white tracking-widest items-center justify-between md:px-12 lg:px-20">
+        <div className="hidden w-full items-center justify-between bg-black tracking-widest text-white md:flex md:px-12 lg:px-20">
           <button className="border-2 border-white px-4 py-1 hover:bg-white hover:text-black">
             WOMEN
           </button>
-          <p className="justify-center text-center p-1">
+          <p className="justify-center p-1 text-center">
             NEW HERE? Get 15% off almost on everything!*
             <br />
             with code: <strong>HIFRIEND</strong>
@@ -122,11 +120,8 @@ export default function Root() {
           </button>
         </div>
       </header>
-      <main className="flex flex-col items-center min-h-screen w-full">
-        <MobileMenu
-          openMobileMenu={openMobileMenu}
-          toggleMobileMenu={toggleMobileMenu}
-        />
+      <main className="flex min-h-screen w-full flex-col items-center">
+        <MobileMenu openMobileMenu={openMobileMenu} toggleMobileMenu={toggleMobileMenu} />
         <Cart openCart={openCart} toggleCart={toggleCart} />
         <Favorites openFav={openFav} toggleFav={toggleFav} />
         <Outlet />
@@ -135,5 +130,5 @@ export default function Root() {
         <Footer />
       </footer>
     </div>
-  );
+  )
 }

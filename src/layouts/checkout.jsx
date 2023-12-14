@@ -1,5 +1,5 @@
 const CheckoutLayout = () => {
-  return <div></div>;
-};
+  return <div></div>
+}
 
-export default CheckoutLayout;
+export default CheckoutLayout

@@ -1,52 +1,52 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 
 //components
-import Cart from "../components/cart-sidenav";
-import Favorites from "./favorites-sidenav";
+import Cart from '../components/cart-sidenav'
+import Favorites from './favorites-sidenav'
 
 const Navbar = () => {
-  const [openCat, setOpenCat] = useState("");
-  const [openCart, setOpenCart] = useState(false);
-  const [openFav, setOpenFav] = useState(false);
+  const [openCat, setOpenCat] = useState('')
+  const [openCart, setOpenCart] = useState(false)
+  const [openFav, setOpenFav] = useState(false)
 
   const toggleCart = () => {
-    setOpenCart(!openCart);
-  };
+    setOpenCart(!openCart)
+  }
   const toggleFav = () => {
-    setOpenFav(!openFav);
-  };
+    setOpenFav(!openFav)
+  }
 
   return (
     <div>
-      <div className="relative flex flex-col max-w-full items-center justify-center">
+      <div className="relative flex max-w-full flex-col items-center justify-center">
         <header className="w-full bg-darkGray text-white">
-          <div className="flex items-center justify-center md:max-w-7xl md:h-16 md:px-10 mx-auto">
+          <div className="mx-auto flex items-center justify-center md:h-16 md:max-w-7xl md:px-10">
             <a href="/">
-              <span className="text-4xl mr-4">Dripylux</span>
+              <span className="mr-4 text-4xl">Dripylux</span>
             </a>
             <NavLink
-              to={"/women"}
+              to={'/women'}
               onClick={() => {
-                setOpenCat("women");
+                setOpenCat('women')
               }}
-              className="h-full flex items-center justify-center px-8 hover:bg-white hover:text-gray-700"
+              className="flex h-full items-center justify-center px-8 hover:bg-white hover:text-gray-700"
             >
               WOMEN
             </NavLink>
             <NavLink
-              to={"/men"}
+              to={'/men'}
               onClick={() => {
-                setOpenCat("men");
+                setOpenCat('men')
               }}
-              className="h-full flex items-center justify-center px-10 hover:bg-white hover:text-gray-700"
+              className="flex h-full items-center justify-center px-10 hover:bg-white hover:text-gray-700"
             >
               MEN
             </NavLink>
             <input
               type="text"
-              className="flex-1 rounded-lg px-4 py-1 ml-4 mr-6"
+              className="ml-4 mr-6 flex-1 rounded-lg px-4 py-1"
               placeholder="Search for items and brands"
             />
             <div className="flex gap-8">
@@ -57,7 +57,7 @@ const Navbar = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -73,7 +73,7 @@ const Navbar = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -89,7 +89,7 @@ const Navbar = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -100,8 +100,8 @@ const Navbar = () => {
               </span>
             </div>
           </div>
-          <div className="bg-lightGray flex justify-center items-center relative">
-            {openCat === "men" ? (
+          <div className="relative flex items-center justify-center bg-lightGray">
+            {openCat === 'men' ? (
               <div className="py-2">
                 <NavigationMenu.Root className="relative z-[1] flex w-screen justify-center">
                   <NavigationMenu.List className="flex gap-5">
@@ -109,79 +109,79 @@ const Navbar = () => {
                       <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
                         <span>New In</span>
                       </NavigationMenu.Trigger>
-                      <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
-                        <div className="bg-slate-200 w-[1280px] h-[480px]"></div>
+                      <NavigationMenu.Content className="absolute left-0 top-0 w-full sm:w-auto">
+                        <div className="h-[480px] w-[1280px] bg-slate-200"></div>
                       </NavigationMenu.Content>
                     </NavigationMenu.Item>
                     <NavigationMenu.Item>
                       <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
                         <span>Clothing</span>
                       </NavigationMenu.Trigger>
-                      <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
-                        <div className="bg-slate-200 w-[1280px] h-[480px]"></div>
+                      <NavigationMenu.Content className="absolute left-0 top-0 w-full sm:w-auto">
+                        <div className="h-[480px] w-[1280px] bg-slate-200"></div>
                       </NavigationMenu.Content>
                     </NavigationMenu.Item>
                     <NavigationMenu.Item>
                       <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
                         <span>Accessories</span>
                       </NavigationMenu.Trigger>
-                      <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
-                        <div className="bg-slate-200 w-[1280px] h-[480px]"></div>
+                      <NavigationMenu.Content className="absolute left-0 top-0 w-full sm:w-auto">
+                        <div className="h-[480px] w-[1280px] bg-slate-200"></div>
                       </NavigationMenu.Content>
                     </NavigationMenu.Item>
                     <NavigationMenu.Item>
                       <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
                         <span>Brands</span>
                       </NavigationMenu.Trigger>
-                      <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
-                        <div className="bg-slate-200 w-[1280px] h-[480px]"></div>
+                      <NavigationMenu.Content className="absolute left-0 top-0 w-full sm:w-auto">
+                        <div className="h-[480px] w-[1280px] bg-slate-200"></div>
                       </NavigationMenu.Content>
                     </NavigationMenu.Item>
                     <NavigationMenu.Item>
                       <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
                         <span>Shoes</span>
                       </NavigationMenu.Trigger>
-                      <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
-                        <div className="bg-slate-200 w-[1280px] h-[480px]"></div>
+                      <NavigationMenu.Content className="absolute left-0 top-0 w-full sm:w-auto">
+                        <div className="h-[480px] w-[1280px] bg-slate-200"></div>
                       </NavigationMenu.Content>
                     </NavigationMenu.Item>
                     <NavigationMenu.Item>
                       <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
                         <span>Sportwear</span>
                       </NavigationMenu.Trigger>
-                      <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
-                        <div className="bg-slate-200 w-[1280px] h-[480px]"></div>
+                      <NavigationMenu.Content className="absolute left-0 top-0 w-full sm:w-auto">
+                        <div className="h-[480px] w-[1280px] bg-slate-200"></div>
                       </NavigationMenu.Content>
                     </NavigationMenu.Item>
                     <NavigationMenu.Item>
                       <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
                         <span>Homewear</span>
                       </NavigationMenu.Trigger>
-                      <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
-                        <div className="bg-slate-200 w-[1280px] h-[480px]"></div>
+                      <NavigationMenu.Content className="absolute left-0 top-0 w-full sm:w-auto">
+                        <div className="h-[480px] w-[1280px] bg-slate-200"></div>
                       </NavigationMenu.Content>
                     </NavigationMenu.Item>
                   </NavigationMenu.List>
-                  <div className="absolute top-full left-0 flex w-full justify-center">
-                    <NavigationMenu.Viewport className="mt-2 data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut relative h-[var(--radix-navigation-menu-viewport-height)] border-black origin-[top_center] overflow-hidden bg-white transition-[width,_height] duration-100 w-[var(--radix-navigation-menu-viewport-width)]" />
+                  <div className="absolute left-0 top-full flex w-full justify-center">
+                    <NavigationMenu.Viewport className="data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut relative mt-2 h-[var(--radix-navigation-menu-viewport-height)] w-[var(--radix-navigation-menu-viewport-width)] origin-[top_center] overflow-hidden border-black bg-white transition-[width,_height] duration-100" />
                   </div>
                 </NavigationMenu.Root>
               </div>
-            ) : openCat === "women" ? (
+            ) : openCat === 'women' ? (
               <div>
                 <button className="dropdown p-2">more women</button>
               </div>
             ) : null}
           </div>
-          <div className="hidden md:block bg-black text-white w-full">
-            <div className="flex justify-between items-center max-w-7xl px-10 mx-auto">
+          <div className="hidden w-full bg-black text-white md:block">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-10">
               <button
                 onClick={toggleFav}
                 className="border-2 border-white px-4 py-2 hover:bg-white hover:text-black"
               >
                 WOMEN
               </button>
-              <p className="justify-center text-center p-1">
+              <p className="justify-center p-1 text-center">
                 NEW HERE? Get 15% off almost on everything!*
                 <br />
                 with code: HIFRIEND
@@ -199,10 +199,10 @@ const Navbar = () => {
       <Cart openCart={openCart} toggleCart={toggleCart} />
       <Favorites openFav={openFav} toggleFav={toggleFav} />
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
 
 // {
 //   import { Fragment, useState } from "react";

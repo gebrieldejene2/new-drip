@@ -1,26 +1,21 @@
-import { Disclosure, Tab } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Disclosure, Tab } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
 export default function Checkout() {
   return (
-    <div className="container flex flex-col items-center max-w-5xl px-4 md:px-12">
-      <h1 className="text-2xl md:text-3xl text-gray-900 font-bold my-8 uppercase">
-        checkout
-      </h1>
-      <div className="flex flex-col-reverse md:grid grid-cols-5 gap-5 w-full">
-        <form className="col-span-3 flex flex-col w-full text-xs uppercase">
-          <div className="w-full bg-white text-black p-5 mb-5">
-            <label
-              htmlFor="delivery-country"
-              className="block font-extrabold mb-4"
-            >
+    <div className="container flex max-w-5xl flex-col items-center px-4 md:px-12">
+      <h1 className="my-8 text-2xl font-bold uppercase text-gray-900 md:text-3xl">checkout</h1>
+      <div className="flex w-full grid-cols-5 flex-col-reverse gap-5 md:grid">
+        <form className="col-span-3 flex w-full flex-col text-xs uppercase">
+          <div className="mb-5 w-full bg-white p-5 text-black">
+            <label htmlFor="delivery-country" className="mb-4 block font-extrabold">
               delivery country:
             </label>
-            <div className="flex items-center w-1/2">
+            <div className="flex w-1/2 items-center">
               <img
                 src="https://hatscripts.github.io/circle-flags/flags/ng.svg"
                 width="30"
@@ -29,33 +24,31 @@ export default function Checkout() {
               <select
                 name="birth-date"
                 id="birth-date"
-                className="flex-1 uppercase font-medium text-black border-2 border-stone-400 p-4 focus:outline-none"
+                className="flex-1 border-2 border-stone-400 p-4 font-medium uppercase text-black focus:outline-none"
               >
                 <option>nigeria</option>
               </select>
             </div>
           </div>
-          <div className="w-full bg-white text-black p-5 mb-5">
+          <div className="mb-5 w-full bg-white p-5 text-black">
             <Disclosure defaultOpen={true}>
-              <Disclosure.Button className="flex justify-between w-full py-2 mb-2 text-xs uppercase">
+              <Disclosure.Button className="mb-2 flex w-full justify-between py-2 text-xs uppercase">
                 <label htmlFor="promocode" className="block font-extrabold">
                   promo/student code or vouchers:
                 </label>
-                <ChevronDownIcon
-                  className={open ? "rotate-180 transform h-5 w-5" : "h-6 w-6"}
-                />
+                <ChevronDownIcon className={open ? 'h-5 w-5 rotate-180 transform' : 'h-6 w-6'} />
               </Disclosure.Button>
               <Disclosure.Panel>
                 <Tab.Group>
-                  <Tab.List className="flex mb-4">
+                  <Tab.List className="mb-4 flex">
                     <Tab
                       className={({ selected }) =>
                         classNames(
-                          "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
-                          "focus:outline-none focus:ring-0",
+                          'flex w-full items-center justify-center border-gray-700 p-2 text-xs font-black uppercase tracking-wider md:p-4',
+                          'focus:outline-none focus:ring-0',
                           selected
-                            ? "border-x md:border-x-2 border-t md:border-t-2"
-                            : "border-b md:border-b-2",
+                            ? 'border-x border-t md:border-x-2 md:border-t-2'
+                            : 'border-b md:border-b-2',
                         )
                       }
                     >
@@ -64,11 +57,11 @@ export default function Checkout() {
                     <Tab
                       className={({ selected }) =>
                         classNames(
-                          "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
-                          "focus:outline-none focus:ring-0",
+                          'flex w-full items-center justify-center border-gray-700 p-2 text-xs font-black uppercase tracking-wider md:p-4',
+                          'focus:outline-none focus:ring-0',
                           selected
-                            ? "border-x md:border-x-2 border-t md:border-t-2"
-                            : "border-b md:border-b-2",
+                            ? 'border-x border-t md:border-x-2 md:border-t-2'
+                            : 'border-b md:border-b-2',
                         )
                       }
                     >
@@ -78,12 +71,10 @@ export default function Checkout() {
                   <Tab.Panels>
                     <Tab.Panel>
                       <div className="mb-6">
-                        <span className="block font-extrabold mb-4">
-                          add promo/student code
-                        </span>
+                        <span className="mb-4 block font-extrabold">add promo/student code</span>
                         <label
                           htmlFor="promocode"
-                          className="block text-stone-400 text-xs tracking-widest font-bold mb-0.5"
+                          className="mb-0.5 block text-xs font-bold tracking-widest text-stone-400"
                         >
                           promo/student code
                         </label>
@@ -92,11 +83,11 @@ export default function Checkout() {
                             type="text"
                             name="promocode"
                             id="promocode"
-                            className="flex-1 uppercase font-medium text-black border-2 border-darkGray p-4 focus:outline-none"
+                            className="flex-1 border-2 border-darkGray p-4 font-medium uppercase text-black focus:outline-none"
                           />
                           <button
                             type="submit"
-                            className="uppercase text-xs tracking-widest text-white bg-darkGray px-5 py-3"
+                            className="bg-darkGray px-5 py-3 text-xs uppercase tracking-widest text-white"
                           >
                             apply code
                           </button>
@@ -105,12 +96,10 @@ export default function Checkout() {
                     </Tab.Panel>
                     <Tab.Panel>
                       <div className="mb-6">
-                        <span className="block font-extrabold mb-4">
-                          add voucher
-                        </span>
+                        <span className="mb-4 block font-extrabold">add voucher</span>
                         <label
                           htmlFor="voucher"
-                          className="block text-stone-400 text-xs tracking-widest font-bold mb-0.5"
+                          className="mb-0.5 block text-xs font-bold tracking-widest text-stone-400"
                         >
                           voucher
                         </label>
@@ -119,11 +108,11 @@ export default function Checkout() {
                             type="text"
                             name="voucher"
                             id="voucher"
-                            className="flex-1 uppercase font-medium text-black border-2 border-darkGray p-4 focus:outline-none"
+                            className="flex-1 border-2 border-darkGray p-4 font-medium uppercase text-black focus:outline-none"
                           />
                           <button
                             type="submit"
-                            className="uppercase text-xs tracking-widest text-white bg-darkGray px-5 py-3"
+                            className="bg-darkGray px-5 py-3 text-xs uppercase tracking-widest text-white"
                           >
                             apply code
                           </button>
@@ -135,51 +124,43 @@ export default function Checkout() {
               </Disclosure.Panel>
             </Disclosure>
             <div>
-              <label className="block font-extrabold mb-2">need to know</label>
-              <ul className="list-disc list-outside px-5 normal-case text-sm text-stone-600 leading-6">
+              <label className="mb-2 block font-extrabold">need to know</label>
+              <ul className="list-outside list-disc px-5 text-sm normal-case leading-6 text-stone-600">
                 <li className="mb-1">
-                  You can only use one discount/promo code per order.This
-                  applies to our free-delivery codes, too.
+                  You can only use one discount/promo code per order.This applies to our
+                  free-delivery codes, too.
                 </li>
-                <li>
-                  Discount/promo codes cannot be used when buying gift vouchers.
-                </li>
+                <li>Discount/promo codes cannot be used when buying gift vouchers.</li>
               </ul>
             </div>
           </div>
-          <div className="w-full bg-white text-black p-5 mb-5">
-            <label htmlFor="email" className="block font-extrabold mb-2">
+          <div className="mb-5 w-full bg-white p-5 text-black">
+            <label htmlFor="email" className="mb-2 block font-extrabold">
               email address
             </label>
-            <p className="text-sm text-stone-600 normal-case">
-              testemail@gmail.com
-            </p>
+            <p className="text-sm normal-case text-stone-600">testemail@gmail.com</p>
           </div>
-          <div className="w-full bg-white text-black p-5 mb-5">
+          <div className="mb-5 w-full bg-white p-5 text-black">
             <Disclosure defaultOpen={true}>
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex justify-between w-full py-2 mb-2 text-xs uppercase">
-                    <span className="block font-extrabold">
-                      delivery address
-                    </span>
+                  <Disclosure.Button className="mb-2 flex w-full justify-between py-2 text-xs uppercase">
+                    <span className="block font-extrabold">delivery address</span>
                     <ChevronDownIcon
-                      className={
-                        open ? "rotate-180 transform h-5 w-5" : "h-6 w-6"
-                      }
+                      className={open ? 'h-5 w-5 rotate-180 transform' : 'h-6 w-6'}
                     />
                   </Disclosure.Button>
                   <Disclosure.Panel>
                     <Tab.Group>
-                      <Tab.List className="flex mb-4">
+                      <Tab.List className="mb-4 flex">
                         <Tab
                           className={({ selected }) =>
                             classNames(
-                              "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
-                              "focus:outline-none focus:ring-0",
+                              'flex w-full items-center justify-center border-gray-700 p-2 text-xs font-black uppercase tracking-wider md:p-4',
+                              'focus:outline-none focus:ring-0',
                               selected
-                                ? "border-x md:border-x-2 border-t md:border-t-2"
-                                : "border-b md:border-b-2",
+                                ? 'border-x border-t md:border-x-2 md:border-t-2'
+                                : 'border-b md:border-b-2',
                             )
                           }
                         >
@@ -188,11 +169,11 @@ export default function Checkout() {
                         <Tab
                           className={({ selected }) =>
                             classNames(
-                              "w-full flex items-center justify-center p-2 md:p-4 border-gray-700 text-xs font-black tracking-wider uppercase",
-                              "focus:outline-none focus:ring-0",
+                              'flex w-full items-center justify-center border-gray-700 p-2 text-xs font-black uppercase tracking-wider md:p-4',
+                              'focus:outline-none focus:ring-0',
                               selected
-                                ? "border-x md:border-x-2 border-t md:border-t-2"
-                                : "border-b md:border-b-2",
+                                ? 'border-x border-t md:border-x-2 md:border-t-2'
+                                : 'border-b md:border-b-2',
                             )
                           }
                         >
@@ -202,15 +183,13 @@ export default function Checkout() {
                       <Tab.Panels>
                         <Tab.Panel>
                           <div>
-                            <span className="block font-extrabold mb-6">
-                              add address
-                            </span>
+                            <span className="mb-6 block font-extrabold">add address</span>
                             <form>
                               <div className="flex gap-4">
-                                <div className="block w-full mb-4">
+                                <div className="mb-4 block w-full">
                                   <label
                                     htmlFor="firstName"
-                                    className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                    className="mb-1 block font-extrabold uppercase tracking-widest text-stone-400"
                                   >
                                     first name:
                                   </label>
@@ -219,13 +198,13 @@ export default function Checkout() {
                                     name="firstName"
                                     type="text"
                                     required
-                                    className="w-full text-sm font-medium text-black border-2 border-stone-400 p-3 focus:outline-none"
+                                    className="w-full border-2 border-stone-400 p-3 text-sm font-medium text-black focus:outline-none"
                                   />
                                 </div>
-                                <div className="block w-full mb-4">
+                                <div className="mb-4 block w-full">
                                   <label
                                     htmlFor="lastName"
-                                    className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                    className="mb-1 block font-extrabold uppercase tracking-widest text-stone-400"
                                   >
                                     last name:
                                   </label>
@@ -234,14 +213,14 @@ export default function Checkout() {
                                     name="lastName"
                                     type="text"
                                     required
-                                    className="w-full text-sm font-medium text-black border-2 border-stone-400 p-3 focus:outline-none"
+                                    className="w-full border-2 border-stone-400 p-3 text-sm font-medium text-black focus:outline-none"
                                   />
                                 </div>
                               </div>
-                              <div className="block w-full mb-4">
+                              <div className="mb-4 block w-full">
                                 <label
                                   htmlFor="phoneNumber"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="mb-1 block font-extrabold uppercase tracking-widest text-stone-400"
                                 >
                                   phone number:
                                 </label>
@@ -250,13 +229,13 @@ export default function Checkout() {
                                   name="phoneNumber"
                                   type="text"
                                   required
-                                  className="w-full text-sm font-medium text-black border-2 border-stone-400 p-3 focus:outline-none"
+                                  className="w-full border-2 border-stone-400 p-3 text-sm font-medium text-black focus:outline-none"
                                 />
                               </div>
-                              <div className="block w-full mb-2">
+                              <div className="mb-2 block w-full">
                                 <label
                                   htmlFor="addressLine1"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="mb-1 block font-extrabold uppercase tracking-widest text-stone-400"
                                 >
                                   address:
                                 </label>
@@ -265,10 +244,10 @@ export default function Checkout() {
                                   name="addressLine1"
                                   type="text"
                                   required
-                                  className="w-full text-sm font-medium text-black border-2 border-stone-400 p-3 focus:outline-none"
+                                  className="w-full border-2 border-stone-400 p-3 text-sm font-medium text-black focus:outline-none"
                                 />
                               </div>
-                              <div className="block w-full mb-4">
+                              <div className="mb-4 block w-full">
                                 {/* <label
                                   htmlFor="addressLine2"
                                   className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
@@ -280,13 +259,13 @@ export default function Checkout() {
                                   name="addressLine2"
                                   type="text"
                                   placeholder="Optional"
-                                  className="w-full text-sm font-medium text-black border-2 border-stone-400 p-3 focus:outline-none"
+                                  className="w-full border-2 border-stone-400 p-3 text-sm font-medium text-black focus:outline-none"
                                 />
                               </div>
-                              <div className="block w-full mb-4">
+                              <div className="mb-4 block w-full">
                                 <label
                                   htmlFor="city"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="mb-1 block font-extrabold uppercase tracking-widest text-stone-400"
                                 >
                                   city:
                                 </label>
@@ -295,13 +274,13 @@ export default function Checkout() {
                                   name="city"
                                   type="text"
                                   required
-                                  className="w-full text-sm font-medium text-black border-2 border-stone-400 p-3 focus:outline-none"
+                                  className="w-full border-2 border-stone-400 p-3 text-sm font-medium text-black focus:outline-none"
                                 />
                               </div>
-                              <div className="block w-full mb-4">
+                              <div className="mb-4 block w-full">
                                 <label
                                   htmlFor="country"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="mb-1 block font-extrabold uppercase tracking-widest text-stone-400"
                                 >
                                   country:
                                 </label>
@@ -310,13 +289,13 @@ export default function Checkout() {
                                   name="country"
                                   type="text"
                                   required
-                                  className="w-full text-sm font-medium text-black border-2 border-stone-400 p-3 focus:outline-none"
+                                  className="w-full border-2 border-stone-400 p-3 text-sm font-medium text-black focus:outline-none"
                                 />
                               </div>
-                              <div className="block w-full mb-4">
+                              <div className="mb-4 block w-full">
                                 <label
                                   htmlFor="postalCode"
-                                  className="block mb-1 uppercase text-stone-400 font-extrabold tracking-widest"
+                                  className="mb-1 block font-extrabold uppercase tracking-widest text-stone-400"
                                 >
                                   postal code:
                                 </label>
@@ -325,12 +304,12 @@ export default function Checkout() {
                                   name="postalCode"
                                   type="text"
                                   required
-                                  className="w-full text-sm font-medium text-black border-2 border-stone-400 p-3 focus:outline-none"
+                                  className="w-full border-2 border-stone-400 p-3 text-sm font-medium text-black focus:outline-none"
                                 />
                               </div>
                               <button
                                 type="submit"
-                                className="w-full uppercase font-semibold tracking-widest text-white bg-darkGray mt-4 p-5"
+                                className="mt-4 w-full bg-darkGray p-5 font-semibold uppercase tracking-widest text-white"
                               >
                                 deliver to this address
                               </button>
@@ -388,29 +367,21 @@ export default function Checkout() {
               )}
             </Disclosure> */}
           </div>
-          <div className="w-full bg-white text-black p-5 mb-5">
-            <label
-              htmlFor="delivery-options"
-              className="block font-extrabold mb-4"
-            >
+          <div className="mb-5 w-full bg-white p-5 text-black">
+            <label htmlFor="delivery-options" className="mb-4 block font-extrabold">
               delivery options
             </label>
           </div>
-          <div className="w-full bg-white text-black p-5 mb-5">
+          <div className="mb-5 w-full bg-white p-5 text-black">
             <Disclosure>
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex justify-between w-full py-2 text-xs uppercase">
-                    <label
-                      htmlFor="promocode"
-                      className="block font-extrabold mb-4"
-                    >
+                  <Disclosure.Button className="flex w-full justify-between py-2 text-xs uppercase">
+                    <label htmlFor="promocode" className="mb-4 block font-extrabold">
                       payment
                     </label>
                     <ChevronDownIcon
-                      className={
-                        open ? "rotate-180 transform h-5 w-5" : "h-5 w-5"
-                      }
+                      className={open ? 'h-5 w-5 rotate-180 transform' : 'h-5 w-5'}
                     />
                   </Disclosure.Button>
                   <Disclosure.Panel>No</Disclosure.Panel>
@@ -419,13 +390,13 @@ export default function Checkout() {
             </Disclosure>
           </div>
         </form>
-        <div className="col-span-2 bg-white w-full md:h-1/2 p-5 uppercase">
+        <div className="col-span-2 w-full bg-white p-5 uppercase md:h-1/2">
           <div className="flex justify-between">
-            <span className="block font-extrabold text-xs mb-4">4 items</span>
-            <button className="block text-xs mb-4">editt</button>
+            <span className="mb-4 block text-xs font-extrabold">4 items</span>
+            <button className="mb-4 block text-xs">editt</button>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

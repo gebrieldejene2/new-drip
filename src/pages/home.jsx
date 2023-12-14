@@ -1,35 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <section className="container md:mt-8 bg-gray-200 min-h-screen mx-auto flex flex-col items-center">
-      <div className="flex flex-col items-center justify-center w-full flex-1 py-28">
-        <h1 className="bg-white px-6 text-center py-2 text-4xl font-bold sm:text-5xl">
-          DRIPYLUX
-        </h1>
-        <p className="px-4 py-1 bg-white font-heading text-lg">Get drippy</p>
-        <div className="w-full flex flex-col md:flex-row flex-wrap justify-evenly items-center font-black mt-12">
+    <section className="container mx-auto flex min-h-screen flex-col items-center bg-gray-200 md:mt-8">
+      <div className="flex w-full flex-1 flex-col items-center justify-center py-28">
+        <h1 className="bg-white px-6 py-2 text-center text-4xl font-bold sm:text-5xl">DRIPYLUX</h1>
+        <p className="font-heading bg-white px-4 py-1 text-lg">Get drippy</p>
+        <div className="mt-12 flex w-full flex-col flex-wrap items-center justify-evenly font-black md:flex-row">
           <Link
-            to={"/women"}
-            className="bg-white hover:scale-105 px-8 py-3 m-2 border rounded dark:text-gray-50 dark:border-gray-700"
-          >
+            to={'/women'}
+            className="m-2 rounded border bg-white px-8 py-3 hover:scale-105 dark:border-gray-700 dark:text-gray-50">
             SHOP WOMEN
           </Link>
           <Link
-            to={"/men"}
-            className="bg-white hover:scale-105 px-8 py-3 m-2 border rounded dark:text-gray-50 dark:border-gray-700"
-          >
+            to={'/men'}
+            className="m-2 rounded border bg-white px-8 py-3 hover:scale-105 dark:border-gray-700 dark:text-gray-50">
             SHOP MEN
           </Link>
         </div>
       </div>
-      <div className="hidden md:flex items-center text-sm w-full bg-darkGray text-white p-2">
-        <div className="flex flex-col items-start mx-auto">
+      <div className="hidden w-full items-center bg-darkGray p-2 text-sm text-white md:flex">
+        <div className="mx-auto flex flex-col items-start">
           <strong>XYZ PREMiER</strong>
           <p>Unlimited free Next Day Delivery for</p>
           <p>a whole year for $9.95. Ts&Cs apply.</p>
         </div>
-        <div className="uppercase flex flex-col items-start mx-auto">
+        <div className="mx-auto flex flex-col items-start uppercase">
           <strong>students get 10% off</strong>
           <p>get your code</p>
         </div>
@@ -84,5 +80,5 @@ export default function Home() {
     //     </div>
     //   </div>
     // </div>
-  );
+  )
 }

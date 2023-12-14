@@ -1,6 +1,6 @@
 export default function SignUp() {
   return (
-    <div className="flex flex-col items-center w-full p-2">
+    <div className="flex w-full flex-col items-center p-2">
       {/* <p className="text-center mb-4">sign up with ...</p>
       <div className="flex flex-col w-full items-center mb-8">
         <a
@@ -26,16 +26,16 @@ export default function SignUp() {
       <form
         action="#"
         method="POST"
-        className="flex-flex-col w-full items-start text-stone-400 mb-4 px-8 md:px-12"
+        className="flex-flex-col mb-4 w-full items-start px-8 text-stone-400 md:px-12"
       >
         <div className="text-gray-700">
-          <p className="text-center mb-4">sign up with ...</p>
-          <div className="flex flex-col w-full items-center mb-6">
+          <p className="mb-4 text-center">sign up with ...</p>
+          <div className="mb-6 flex w-full flex-col items-center">
             <a
               target="_blank"
               rel="noreferrer"
               href="https://www.google.com"
-              className="flex items-center justify-center w-full border-2 text-black border-gray-300 p-4 uppercase hover:border-blue-700"
+              className="flex w-full items-center justify-center border-2 border-gray-300 p-4 uppercase text-black hover:border-blue-700"
             >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
@@ -44,16 +44,16 @@ export default function SignUp() {
               />
               google
             </a>
-            <p className="text-center normal-case font-medium tracking-normal mt-2">
-              Signing up with social is super quick. No extra passwords to
-              remember - no brain fail. Don't worry, we'd never share any of
-              your data or post anything on your behalf #NotEvil
+            <p className="mt-2 text-center font-medium normal-case tracking-normal">
+              Signing up with social is super quick. No extra passwords to remember - no brain fail.
+              Don't worry, we'd never share any of your data or post anything on your behalf
+              #NotEvil
             </p>
           </div>
-          <p className="text-center mb-6">or sign up with email</p>
+          <p className="mb-6 text-center">or sign up with email</p>
         </div>
-        <div className="block w-full mb-6">
-          <label htmlFor="email" className="block mb-2">
+        <div className="mb-6 block w-full">
+          <label htmlFor="email" className="mb-2 block">
             email address:
           </label>
           <input
@@ -62,17 +62,14 @@ export default function SignUp() {
             type="email"
             autoComplete="email"
             required
-            className="w-full text-sm font-medium text-black border-2 border-stone-400 p-4 focus:outline-none"
+            className="w-full border-2 border-stone-400 p-4 text-sm font-medium text-black focus:outline-none"
           />
-          <label
-            htmlFor="birth"
-            className="block normal-case font-medium tracking-wide mt-1"
-          >
+          <label htmlFor="birth" className="mt-1 block font-medium normal-case tracking-wide">
             We'll send your order confirmation here
           </label>
         </div>
-        <div className="block w-full mb-6">
-          <label htmlFor="email" className="block mb-2">
+        <div className="mb-6 block w-full">
+          <label htmlFor="email" className="mb-2 block">
             first name:
           </label>
           <input
@@ -81,11 +78,11 @@ export default function SignUp() {
             type="email"
             autoComplete="email"
             required
-            className="w-full text-sm font-medium text-black border-2 border-stone-400 p-4 focus:outline-none"
+            className="w-full border-2 border-stone-400 p-4 text-sm font-medium text-black focus:outline-none"
           />
         </div>
-        <div className="block w-full mb-6">
-          <label htmlFor="email" className="block mb-2">
+        <div className="mb-6 block w-full">
+          <label htmlFor="email" className="mb-2 block">
             last name:
           </label>
           <input
@@ -94,11 +91,11 @@ export default function SignUp() {
             type="email"
             autoComplete="email"
             required
-            className="w-full text-sm font-medium text-black border-2 border-stone-400 p-4 focus:outline-none"
+            className="w-full border-2 border-stone-400 p-4 text-sm font-medium text-black focus:outline-none"
           />
         </div>
-        <div className="block w-full mb-4">
-          <label htmlFor="email" className="block mb-2">
+        <div className="mb-4 block w-full">
+          <label htmlFor="email" className="mb-2 block">
             password:
           </label>
           <input
@@ -106,52 +103,46 @@ export default function SignUp() {
             name="password"
             type="password"
             required
-            className="w-full text-sm font-medium text-black border-2 border-stone-400 p-4 focus:outline-none"
+            className="w-full border-2 border-stone-400 p-4 text-sm font-medium text-black focus:outline-none"
           />
-          <label
-            htmlFor="birth"
-            className="block normal-case font-medium tracking-wide mt-1"
-          >
+          <label htmlFor="birth" className="mt-1 block font-medium normal-case tracking-wide">
             Must be 10 or more characters
           </label>
         </div>
-        <div className="block w-full mb-4">
-          <label htmlFor="birth" className="block mb-2">
+        <div className="mb-4 block w-full">
+          <label htmlFor="birth" className="mb-2 block">
             date of birth:
           </label>
           <div className="flex w-full gap-2 ">
             <select
               name="birth-date"
               id="birth-date"
-              className="w-full text-sm font-medium text-black border-2 border-stone-400 p-4 focus:outline-none"
+              className="w-full border-2 border-stone-400 p-4 text-sm font-medium text-black focus:outline-none"
             >
               <option>DD</option>
             </select>
             <select
               name="birth-month"
               id="birth-month"
-              className="w-full text-sm font-medium text-black border-2 border-stone-400 p-4 focus:outline-none"
+              className="w-full border-2 border-stone-400 p-4 text-sm font-medium text-black focus:outline-none"
             >
               <option>MM</option>
             </select>
             <select
               name="birth-year"
               id="birth-year"
-              className="w-full text-sm font-medium text-black border-2 border-stone-400 p-4 focus:outline-none"
+              className="w-full border-2 border-stone-400 p-4 text-sm font-medium text-black focus:outline-none"
             >
               <option>YYYY</option>
             </select>
           </div>
-          <label
-            htmlFor="birth"
-            className="block normal-case font-medium tracking-wide mt-1"
-          >
+          <label htmlFor="birth" className="mt-1 block font-medium normal-case tracking-wide">
             You need to be 16 or more to use Dripylux
           </label>
         </div>
         <button
           type="submit"
-          className="w-full uppercase bg-darkGray text-white p-4 tracking-widest font-semibold"
+          className="w-full bg-darkGray p-4 font-semibold uppercase tracking-widest text-white"
         >
           join dripylux
         </button>
@@ -254,5 +245,5 @@ export default function SignUp() {
         </div>
       </div> */}
     </div>
-  );
+  )
 }

@@ -1,3 +1,3 @@
 export default function AllCategories() {
-  <div></div>;
+  ;<div></div>
 }
